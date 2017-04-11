@@ -57,7 +57,7 @@
 
     <div class="home-intro">
       <div class="row">
-          <h1 align="center">Sequence to Sequence - Video to Text</h1>
+          <h1 align="center">Top-down Visual Saliency Guided by Captions</h1>
       </div>
           <div class="highlight-box">
            <h2>
@@ -77,20 +77,12 @@
           <a name="abstract"></a>
           <h2>Abstract</h2>
           <p class="text-justify">
-    Real-world videos often have complex dynamics; and methods for generating
-open-domain video descriptions should be sensitive to temporal structure and
-allow both input (sequence of frames) and output (sequence of words) of variable
-length. To approach this problem, we propose a novel end-to-end 
-sequence-to-sequence model to generate captions for videos. For this we exploit
-recurrent neural networks, specifically LSTMs, which have demonstrated
-state-of-the-art performance in image caption generation. 
-Our LSTM model is trained on video-sentence pairs and learns to associate a
-sequence of video frames to a sequence of words in order to generate a
-description of the event in the video clip. Our model naturally is able to learn
-the temporal structure of the sequence of frames as well as the sequence model
-of the generated sentences, i.e. a language model. 
-We evaluate several variants of our model that exploit different visual features on a 
-standard set of YouTube videos and two movie description datasets (M-VAD and MPII-MD).
+    Neural image/video captioning models can generate accurate descriptions, but their internal process of mapping regions to words is a black box and therefore difficult to explain. 
+Top-down neural saliency methods can find important regions given a high-level semantic task such as object classification, but cannot use a natural language sentence as the top-down input for the task. 
+In this paper, we propose Caption-Guided Visual Saliency to expose the region-to-word mapping in modern encoder-decoder networks and demonstrate that it is learned implicitly from caption training data, without any pixel-level annotations. Our approach can produce spatial or spatio-temporal heatmaps for both predicted captions, and for arbitrary query sentences.
+It recovers saliency without the overhead of introducing explicit attention layers, and can be used to analyze a variety of existing model architectures and improve their design. 
+Evaluation on large-scale video and image datasets demonstrates that our
+approach achieves comparable captioning performance with existing methods while providing more accurate saliency heatmaps.
           </p>
           <center>
           <a
@@ -112,9 +104,9 @@ standard set of YouTube videos and two movie description datasets (M-VAD and MPI
           <h2>Overview</h2>
           <center>
           <div class="approachimg">
-            <img class="center-block" src="http://cs.utexas.edu/~vsub/imgs/S2VTarchitecture.png" alt="S2VT architecture overview"></img>
+            <img class="center-block" src="imgs/lm_fusion/overview.png" alt="overview"></img>
           </div>
-          <p class="lead">An overview of the S2VT video to text architecture.</p>
+          <p class="lead">An overview of the approach.</p>
           </center>
           <center>
           <div class="embed-responsive embed-responsive-16by9">
