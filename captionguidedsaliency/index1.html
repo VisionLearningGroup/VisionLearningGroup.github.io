@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Subhashini Venugopalan</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/template.css" rel="stylesheet">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-59771467-2', 'auto');
+      ga('send', 'pageview');
+    
+    </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+    
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+              <!--<li><a href="./index.html#">Home</a></li>
+              <li><a href="./index.html#Research">Research</a></li>
+              <li><a href="./index.html#Contact">Contact</a></li>-->
+            </ul
+          </div><!-- /.navbar-collapse -->
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+    <div class="home-intro">
+      <div class="row">
+          <h1 align="center">Sequence to Sequence - Video to Text</h1>
+      </div>
+          <div class="highlight-box">
+           <h2>
+           <div class="center-pills">
+           <ul class="nav nav-pills">
+          <li role="presentation"> <a href="#abstract">Abstract</a></li> 
+          <li role="presentation"> <a href="#overview">Overview</a></li> 
+          <li role="presentation"> <a href="#examples">Examples</a></li>
+          <li role="presentation"> <a href="#code">Code</a></li> 
+          <li role="presentation"> <a href="#refs">Reference</a></li>
+           </ul>
+          </div>
+          </h2>
+          </div>
+
+          <div class="project-page">
+          <a name="abstract"></a>
+          <h2>Abstract</h2>
+          <p class="text-justify">
+    Real-world videos often have complex dynamics; and methods for generating
+open-domain video descriptions should be sensitive to temporal structure and
+allow both input (sequence of frames) and output (sequence of words) of variable
+length. To approach this problem, we propose a novel end-to-end 
+sequence-to-sequence model to generate captions for videos. For this we exploit
+recurrent neural networks, specifically LSTMs, which have demonstrated
+state-of-the-art performance in image caption generation. 
+Our LSTM model is trained on video-sentence pairs and learns to associate a
+sequence of video frames to a sequence of words in order to generate a
+description of the event in the video clip. Our model naturally is able to learn
+the temporal structure of the sequence of frames as well as the sequence model
+of the generated sentences, i.e. a language model. 
+We evaluate several variants of our model that exploit different visual features on a 
+standard set of YouTube videos and two movie description datasets (M-VAD and MPII-MD).
+          </p>
+          <center>
+          <a
+          href="http://www.cs.utexas.edu/users/ml/papers/venugopalan.iccv15.pdf" class="btn btn-danger" role="button">PDF</a>
+          <a
+          href="https://www.cs.utexas.edu/~vsub/pdf/S2VT_slides.pdf" class="btn btn-success"
+          role="button">Slides</a>
+          <a
+          href="https://www.cs.utexas.edu/~vsub/pdf/S2VT_poster.pdf"
+          class="btn btn-warning"
+          role="button">Poster</a>
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="overview"></a>
+          <h2>Overview</h2>
+          <center>
+          <div class="approachimg">
+            <img class="center-block" src="http://cs.utexas.edu/~vsub/imgs/S2VTarchitecture.png" alt="S2VT architecture overview"></img>
+          </div>
+          <p class="lead">An overview of the S2VT video to text architecture.</p>
+          </center>
+          <center>
+          <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item"
+          src="https://www.youtube.com/embed/-xNI7e7YgDk"
+          allowfullscreen></iframe>
+          </div>
+          <p class="lead">
+          ICCV 2015 Spotlight Video.
+          </p>
+          </center>
+
+
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="examples"></a>
+          <h2>Examples</h2>
+          <center>
+          <div class="col-md-6">
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+            src="https://www.youtube.com/embed/XTq0huTXj1M"
+            allowfullscreen></iframe>
+            </div>
+            <p class="lead">
+            Sample clips from MPII-MD dataset.
+            </p>
+          </div>
+          <div class="col-md-6">
+            <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+            src="https://www.youtube.com/embed/pER0mjzSYaM"
+            allowfullscreen></iframe>
+            </div>
+            <p class="lead">
+            Sample clips from M-VAD dataset.
+            </p>
+          </div>
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="code"></a>
+          <h2>Code</h2>
+          <p class="lead">
+            The code to prepare data and train the model can be found in:
+            </br>
+            <a href="https://github.com/vsubhashini/caffe/tree/recurrent/examples/s2vt">https://github.com/vsubhashini/caffe/tree/recurrent/examples/s2vt</a>
+            </br>
+            </br>
+            Model information:<a
+            href="https://gist.github.com/vsubhashini/38d087e140854fee4b14"> GitHub_Gist</a>
+            </br>
+            Download pre-trained model: <a
+            href="https://www.dropbox.com/s/wn6k2oqurxzt6e2/s2s_vgg_pstream_allvocab_fac2_iter_16000.caffemodel?dl=1">S2VT_VGG_RGB_MODEL</a>
+            (333MB)
+            </br>
+            Vocabulary:
+            <a
+            href="https://www.dropbox.com/s/v1lrc6leknzgn3x/yt_coco_mvad_mpiimd_vocabulary.txt?dl=0">S2VT_vocabulary</a>
+            </br>
+            Evaluation Code:
+            <a
+            href="https://github.com/vsubhashini/caption-eval">https://github.com/vsubhashini/caption-eval</a>
+
+          </p>
+            <h3>Notes:</h3>
+          <p class="lead">
+          <dl style="font-size:16px;">
+            <dt>Caffe Compatibility</dt> <dd>
+            The network is currently supported by the <code>recurrent</code> branch of the
+            Caffe fork
+             in <a href="https://github.com/vsubhashini/caffe.git">my
+             repository</a> or <a
+             href="https://github.com/jdonahue/caffe.git">Jeff's
+             repository</a>
+            but are not yet
+            compatible with the <code>master</code> branch of
+            <a href="https://github.com/BVLC/caffe/">Caffe</a>.
+            </dd>
+          </dl>
+          </p>
+          <h3>Datasets</h3>
+          <p class="lead">
+            The datasets used in the paper are available at these links:
+            </br>
+          <dl style="font-size:16px;">
+            Microsoft Video Description Dataset (Youtube videos):
+            </br>
+            <a
+            href="http://www.cs.utexas.edu/users/ml/clamp/videoDescription/">Project
+            Page - http://www.cs.utexas.edu/users/ml/clamp/videoDescription/</a>
+            </br><a
+            href="http://research.microsoft.com/en-us/downloads/38cf15fd-b8df-477e-a4e4-a4680caa75af/default.aspx">[Raw Data Download
+            Link]</a>
+            <a
+            href="https://www.dropbox.com/sh/4ecwl7zdha60xqo/AAC_TAsR7SkEYhkSdAFKcBlMa?dl=0">[PROCESSED_DATA]</a>
+            </br>
+            MPII Movie Description (MPII-MD) Dataset:
+            </br>
+            <a
+            href="http://www.mpi-inf.mpg.de/movie-description">http://www.mpi-inf.mpg.de/movie-description</a>
+            </br>
+            Montreal Video Annotation Description (M-VAD) Dataset:
+            </br>
+            <a
+            href="http://www.mila.umontreal.ca/Home/public-datasets/montreal-video-annotation-dataset">http://www.mila.umontreal.ca/Home/public-datasets/montreal-video-annotation-dataset</a>
+            </br>
+            </dl>
+          </p>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          <a name="refs"></a>
+          <h2>Reference</h2>
+          <p class="lead">
+          If you find this useful in your work please consider citing:
+          <div class="highlight">
+          <pre> <code> 
+          @inproceedings{venugopalan15iccv,
+          title = {Sequence to Sequence -- Video to Text},
+          author = {Venugopalan, Subhashini and Rohrbach, Marcus and Donahue, Jeff 
+                    and Mooney, Raymond and Darrell, Trevor and Saenko, Kate},
+          booktitle = {Proceedings of the IEEE International Conference on Computer Vision (ICCV)},
+          year = {2015}
+          }
+ </code> </pre>
+
+          </div>
+
+    </div>
+    </div> <!--container-->
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted text-center" style="padding-top: 10px">
+                <a title="Creative Commons Attribution 4.0 International license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+                  <img alt="License" src="imgs/cca4-88x31.png"></img>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script>
+  </body>
+</html>
+

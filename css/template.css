@@ -1,0 +1,143 @@
+  body {
+  padding-top: 50px;
+} 
+@media (min-width: 768px) {
+  .home-intro {
+    padding: 125px 100px;
+  }
+}
+/** Modified Responsive CSS **/
+
+@media (min-width: 320px) {
+  .navbar-collapse {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible; !important;
+    visibility: visible; !important;
+  }
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+  .navbar-fixed-top .navbar-collapse,
+  .navbar-static-top .navbar-collapse,
+  .navbar-fixed-bottom .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar-toggle {
+     display: none;
+  }
+  .navbar-nav {
+    float: left;
+    margin: 0;
+  }
+  .navbar-nav > li {
+  float: left;
+  }
+}
+
+/** end collapse **/
+
+a {
+    color: #12C;
+}
+a:hover {
+    color: #12C;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+.navbar .navbar-collapse {
+    text-align: center;
+}
+.navbar-inverse {
+    background-color: #DD4B39;
+    border-color: #C34444;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFD;
+    font-size: 1.3em;
+    font-weight: bold;
+} 
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #222;
+}
+hr.soften {
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.8), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.8), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.8), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.8), rgba(0,0,0,0));
+  border: 0;
+}
+@media (min-width: 768px) {
+  .publications {
+    padding: 50px 100px;
+  }
+}
+.pwrap {
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #DDD;
+}
+.pubimg img {
+  max-width: 100%;
+  min-height: 175px;
+}
+.pubt {
+  font-size: 22px;
+  color: #000;
+}
+.pubv {
+  color: #093;
+  font-size: 22px;
+}
+.publ li {
+  margin: 5px 2px;
+  display: inline-block;
+  font-size: 20px;
+}
+.publ ul {
+    margin: 0px;
+    padding: 0px;
+}
+.project img {
+  max-width: 400px;
+  min-height: 250px;
+}
+.approachimg img {
+  max-width: 70%;
+  min-height: 200px;
+}
+
+@media (min-width: 768px) {
+  .contact {
+    padding: 50px 100px;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+.highlight-box { border:solid 0px #98BE10; background:#F0FFFF;
+color:#222222; text-align:left; font-size: smaller;}
+.highlight-box li {
+  font-size: 18px;
+}
+
+.project-page {
+  padding: 30px 2px 20px 2px;
+}
+
+.center-pills { text-align:center; }
+.center-pills ul.nav-pills { display:inline-block; vertical-align:middle;}
+.center-pills li { display:inline; }
+.center-pills a { float:left; font-weight:bold; }
