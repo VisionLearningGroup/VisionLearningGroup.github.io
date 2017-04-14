@@ -1,9 +1,150 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<title>Vision and Learning group</title>
-	</head>
-	<body>
-		In progress!!
-	</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Computer Vision and Learning Group at UMass Lowell</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+		.PicBorder{
+		width:200px;
+		height:200px;
+		}
+		.publogo { width: 100 px; margin-right : 20px; float : left; border : 0;}
+		.publication { clear : left; padding-bottom : 0px; }
+		.publication p { height : 100px; padding-top : 5px;}
+		.publication strong a { color : #0000A0; }
+		.publication .links { position : relative; top : 15px }
+		.publication .links a { margin-right : 20px; }
+		.codelogo { margin-right : 10px; float : left; border : 0;}
+		.code { clear : left; padding-bottom : 10px; vertical-align :middle;} 
+		.code .download a { display : block; margin : 0 15px; float : left;}
+		.code strong a { color : #000; }
+		.external a { margin : 0 10px; }
+		.external a.first { margin : 0 10px 0 0; }
+		.personal {width:100px;height:100px;}
+		.pfloat {float:left;margin: 20px 100px 20px 1px;}
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="wrapper" >
+      <header class="without-description">
+	<a href=""><img src="images/logohorz.gif" height="80"/></a>
+        <p></p>
+      </header>  
+	  
+      <section style="height:800px" >
+	<!--Menu Part begin-->
+	<div style="width:10%;float:left;display:inline;" align="left">
+	<ul style="width:120px;" id="menu">
+	<li style="background-color:#F4F4FC"><a href="index.html">Home</a></li>	
+	<li style="background-color:#afdfe4"><a href="people.html">People</a></li>
+	<li style="background-color:#F4F4FC"><a href="research.html">Research</a></li>	
+	<li style="background-color:#afdfe4"><a href="publication.html">Publications</a></li>	
+	<li style="background-color:#F4F4FC"><a href="teaching.html">Teaching</a></li>
+	</ul>
+	</div>		
+	<!--Menu end-->
+	<div style="width:90%;float:left;display:inline;" id="alternative">
+        <!--******************************************-->
+	<!--begin page content, edit you own page here-->
+
+	
+	    <p>Welcome to Prof. Saenko's <a href="index.html">Computer Vision and Machine Learning Group.</a>  
+	    </p>				
+	
+	  
+	    <h2>News</h2>				
+	      <ul><big>
+		      Slides from Kate's talk at the <a href="https://sites.google.com/site/nips2016intelligenttrans/schedule">NIPS 2016 workshop on Machine Learning for Intelligent 
+		      Transportation Systems</a> on December 9,  
+		      <a href="https://drive.google.com/file/d/0B4IapRTv9pJ1czJkQUpMSWpLSVU/view">Domain Adaptation for Perception and Action.</a>
+		      
+		      <li> <font color="red">NEW:</font>  We are hosting the <a href="http://vision.cs.uml.edu/necv2016.html"> 2016 New England Computer Vision Workshop (NECV)</a> at Boston University.
+		      </li>
+		      <li>  Our paper titled Deep CORAL: Correlation Alignment for Deep Domain Adaptation has won the <a href="/pubs/awardTASCK-CV2016.pdf"> <font color="red">Honorable Mention Paper</font></a> of the TASK-CV workshop at ECCV'2016.
+		</li>
+		<li>Our paper 
+	      		<a href="http://arxiv.org/abs/1511.05234">"Ask, Attend and Answer: Exploring Question-Guided Spatial Attention for Visual Question Answering"</a>
+	      		is accepted to ECCV 2016. Here is the video spotlight:<br><br>
+	      		<iframe width="640" height="480" src="https://www.youtube.com/embed/FjpRwVKYJQ8?rel=0" frameborder="0" allowfullscreen></iframe>
+	      	</li>
+	        <li>Our paper <a href="https://arxiv.org/abs/1609.04356">Combining Texture and Shape Cues for Object Detection with 
+			Minimal Supervision</a> was accepted to ACCV-16.
+	      	</li>
+	      	<li>Our paper   
+	      		<a href="https://arxiv.org/abs/1605.06695">"Fine-to-coarse Knowledge Transfer For Low-Res Image Classification"</a>
+	      		was accepted to ICIP-16.
+	      	</li>
+	      	<li> <font color="red">Moving to Boston University</font> Kate has accepted an Assistant Professor position in the 
+	      	<a href="http://www.bu.edu/cs/">Computer Science Department</a> at <a href="http://www.bu.edu/">Boston University</a>, and will be moving this summer, along with her group. Stay tuned for the new website.
+	      	</li>
+	      	<li> <a href="https://arxiv.org/abs/1607.01719">Deep CORAL: Correlation Alignment for Deep Domain Adaptation (Extended Abstract)</a>.
+	      	</li>
+	      	<li> Two orals accepted to <a href="http://cvpr2016.thecvf.com/">CVPR 2016</a>: 
+	      	<a href="http://arxiv.org/abs/1511.05284">Deep Compositional Captioning: Describing Novel Object Categories 
+	      	without Paired Training Data</a> and <a href="http://arxiv.org/abs/1511.04164">Natural Language Object Retrieval</a>.
+	      	</li>
+	      	<li>  Slides from Kate's MIT talk on March 15th: 
+	      	<a href="https://drive.google.com/file/d/0B4IapRTv9pJ1eWowSzJBNGh0aFU/view?usp=sharing">Adaptive Deep Learning for 
+	      	Vision and Language.</a>
+	      	</li>	
+	      	<li>  Our paper titled Return of Frustratingly Easy Domain Adaptation (Extended Abstract) has won the <a href="/pubs/awardTASCK-CV2015-Best.pdf"> <font color="red">Best Paper Prize</font></a> of the TASK-CV workshop at ICCV'2015.
+		</li>	
+	      	<li>  Our paper titled <a href="http://arxiv.org/abs/1511.05547">Return of Frustratingly Easy Domain Adaptation</a> was accepted to AAAI-16.
+		</li>
+		<li> Our group is co-organizing the <a href="https://sites.google.com/site/tlworkshop2015/">Transfer and Multi-Task Learning: Trends and New Perspectives Workshop</a> at NIPS 2015 on December 12th, 2015 in Montreal, Canada.
+		</li>
+	      	<li> Four papers accepted to ICCV 2015! Here are some spotlights:<br>
+	      		<iframe width="640" height="480" src="https://www.youtube.com/embed/-xNI7e7YgDk?rel=0" frameborder="0" allowfullscreen></iframe>
+			<iframe width="640" height="480" src="https://www.youtube.com/embed/gQMDX1Q2OfY?rel=0" frameborder="0" allowfullscreen></iframe>
+	      	</li>
+	      <li>
+Slides from Kate's lecture at the <a href="">Microsoft Machine Learning and Intelligence School</a>, which took place in St Petersburg, Russia, are available here:
+<a href="https://drive.google.com/file/d/0B4IapRTv9pJ1V1N1LUFmUVRDbWc/view?usp=sharing">part1</a>, <a href="https://drive.google.com/file/d/0B4IapRTv9pJ1MmlSc0NtSXdmMmc/view?usp=sharing">part2</a>.
+	      </li>
+	      <li> We will present <a href="pubs/cvpr2015_workshop_virtual_dataset.pdf">Generating Large Scale Datasets from 3D CAD Models</a> at the <a href="https://sites.google.com/site/cvpr2015futureofdataworkshop/schedule">workshop</a>, initial datasets are available <a href="http://vision.cs.uml.edu/datasets/">here</a>
+	      </li>
+	      <li> I am co-organizing the <a href="https://sites.google.com/site/cvpr2015futureofdataworkshop/schedule">Future of Datasets in Vision Workshop</a> at CVPR 2015 on June 11th, 2015 in Boston, MA.
+		</li>
+		<li> <a href="https://drive.google.com/open?id=0B4IapRTv9pJ1b0xObHVsMmxieHc">Slides</a> from my recent <a href="http://opendatascicon.com/schedule/deep-learning/">tutorial</a> on the deep learning library <a href="caffe.berkeleyvision.edu">Caffe</a> at the <a href="http://opendatascicon.com/">Open Data Science Conference</a> on May 30th in Boston. 
+		</li>
+		<li> <a href="http://lsda.berkeleyvision.org">Large-Scale Detection by Adaptation</a> 7K Category Detection models are now available!
+		</li>
+		<li> Our paper titled <a href="/pubs/bmvc14_sun_fromvirtualtoreal.pdf">From Virtual to Reality: Fast Adaptation of Virtual Object Detectors to Real Domains</a> was accepted to BMVC 2014. See also <a href="bmvc14_FromVirtualToReality.pptx">slides</a> from a recent talk.
+		</li>
+		<li>
+		  <a href="./projects.html#data">DeCAF features</a> that achieve the state of the art on the Office domain adaptation dataset are now available for download.
+		</li>
+	    <li> I am co-chair of the <a href="http://www.cvc.uab.es/adas/task-cv2014">TASK-CV Workshop on Transferring and Adapting Source Knowledge in Computer Vision</a>, co-located with ECCV2014.</li>
+	    <li>Kate Saenko will be giving a <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.360.3572&rep=rep1&type=pdf">tutorial on Domain Transfer Learning for Vision Applications</a> at 
+		    <a href="http://tab.computer.org/pamitc/archive/cvpr2012/program-details/tutorials.html"> CVPR 2012</a> with Dong Xu and Ivor Tsang.</li>
+	    <li> I am co-organizing the <a href="http://nips.cc/Conferences/2011/Program/event.php?ID=2539"> Workshop on Integrating Language and Vision</span></a>, held at NIPS 2011 in Grenada, Spain.</li>
+	      </big></ul>
+
+
+	  
+        <!--******************************************-->
+	<!--end of page content-->
+	</div>
+      </section>
+  
+      <script src="external/jquery/jquery.js"></script>
+      <script src="jquery-ui.js"></script>
+      <script>
+	$( "#menu" ).menu();
+      </script>		     
+      <footer>
+	<p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+      </footer>
+      <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
 </html>

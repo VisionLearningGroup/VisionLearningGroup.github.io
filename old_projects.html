@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0043)http://www.cs.uml.edu/~saenko/projects.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Design by Free CSS Templates http://www.freecsstemplates.org Released for free under a Creative Commons Attribution 2.5 License Name : Splendid Description: A two-column, fixed-width design for 1024x768 screen resolutions. Version : 1.0 Released : 20090622 -->
+<title>Kate Saenko</title>
+
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link href="./old_projects_files/style.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+<div id="wrapper">
+<div id="logo">
+<h1><a href="http://www.cs.uml.edu/~saenko/projects.html#">Kate<span style="color: rgb(204, 204, 204);">Saenko</span> </a></h1>
+</div>
+<hr><!-- end #logo -->
+<div id="header">
+<div id="menu">
+<ul>
+<li><big><a href="http://www.cs.uml.edu/~saenko/index.html" class="first">Home</a></big></li>
+<li class="current_page_item"><big><a href="http://www.cs.uml.edu/~saenko/pubs.html">Publications</a></big></li>
+<li><big><a href="./old_projects_files/old_projects.html">Projects</a></big></li>
+<!-- <li><big><a href="katesaenko.pdf">CV</a></big></li> -->
+<li><big><a href="http://www.cs.uml.edu/~saenko/contact.html">Contact</a></big></li>
+</ul>
+</div>
+<!-- end #menu -->
+<div id="search">
+<form method="get" action="">
+<fieldset><big><big> <input name="s" id="search-text" size="15" type="text"> <input id="search-submit" value="GO" type="submit"></big></big></fieldset>
+</form>
+</div>
+<!-- end #search --><big><big> </big></big></div>
+<!-- end #header --><!-- end #header-wrapper -->
+<div id="page">
+<div id="page-bgtop">
+<div id="content">
+<div class="post">
+<h2 class="title"><a name="DERENDERING"></a>Probabilistic Color De-rendering</h2>
+<p class="meta">Last updated: April 2012</p>
+<div class="entry"><p class="MSONormal">Most images found on the
+internet are produced by consumer digital cameras, which use
+tone-mapping to create compact, narrow-gamut images that are
+nonetheless visually pleasing. Unfortunately, in doing so, consumer
+cameras discard or distort substantial radiometric signal that could
+otherwise be used for many computer vision applications that rely on
+accurate measurements of scene colors: multi-view 3D reconstruction,
+photometric stereo, denoising, and many more. Existing methods attempt
+to undo these effects through deterministic maps that de-render the
+reported narrow-gamut colors (JPG) back to their original wide-gamut
+sensor measurements (RAW). Deterministic approaches are unreliable,
+however, because the cameras' wide-to-narrow mapping is often
+many-to-one, as shown in the figure below (yellow dots=wide-gamut
+colors, black dots=narrow gamut colors):</p><p style="text-align: center;" class="MSONormal"><img style="border: 0px solid ; width: 539px; height: 147px;" alt="color rendering: many-to-one mapping" src="./old_projects_files/Slide1.JPG" hspace="0" vspace="0"></p><p class="MSONormal">The
+reverse mapping is thus one-to-many and has inherent uncertainty and
+loss of information. Our solution is to use probabilistic maps, rather
+than deterministic ones, providing uncertainty estimates useful to many
+applications. In<span class="entry">&nbsp;Xiong et al.</span> we used a
+non-parametric Bayesian regression technique---local Gaussian process
+regression---to predict for each pixel's narrow-gamut color a
+probability distribution over the scene colors that could have created
+it, described by a Gaussian distribution with a mean and variance:</p><p style="text-align: center;" class="MSONormal"><img style="border: 0px solid ; width: 544px; height: 149px;" alt="derendering of internet images" src="./old_projects_files/Slide2.JPG" hspace="0" vspace="0"></p><p class="MSONormal">Using a variety of consumer cameras we show that these distributions,
+once learned from training data, are effective in simple probabilistic
+adaptations of two popular applications: multi-exposure imaging and
+photometric stereo. Our results on these applications are better than
+those of corresponding deterministic approaches, especially for
+saturated and out-of-gamut colors.</p><p class="MSONormal">Papers:</p><p class="MSONormal"><span class="entry">Y. Xiong, K. Saenko,
+T. Zickler, T. Darrell, "From Pixels to Physics: Probabilistic
+Color De-rendering", to appear in Proc. IEEE Conference on Computer Vision and
+Pattern Recognition (CVPR), 2012.</span></p><span class="entry"></span></div>
+</div>
+<div class="post">
+<h2 class="title"><a name="DA"></a>Domain
+Adaptation for Object recognition</h2>
+<p class="meta">Last updated: September 2011</p>
+<div class="entry">
+<p class="MSONormal"><img style="width: 307px; height: 127px; float: right;" alt="dataset shift" src="./old_projects_files/domain_shift.png" hspace="10" vspace="5"> Domain adaptation is an
+important
+emerging topic in computer vision. This project investigates domain
+shift in the context of object recognition.
+We introduced a method that adapts object models acquired in a
+particular visual domain to new imaging conditions by learning a
+transformation that minimizes the effect of domain-induced changes in
+the feature distribution. The transformation is learned in a supervised
+manner and can be applied to categories for which there are no labeled
+examples in the new domain. While we focus our evaluation on object
+recognition tasks, the transform-based adaptation technique we develop
+is general and could be applied to non-image data.&nbsp;We
+experimentally demonstrate the ability of our method to improve
+recognition on categories with few or no target domain labels and
+moderate to large changes in the imaging conditions.</p>
+
+<p>Please visit the <a href="https://www.eecs.berkeley.edu/~jhoffman/domainadapt/">Domain Adaptation Project</a> webpage for more details and software.
+</p>
+
+<p class="MSONormal">Papers:</p>
+<p class="MsoNormal">B. Kulis, K. Saenko, and T. Darrell, <a href="http://www.cs.uml.edu/~saenko/cvpr_adapt.pdf">
+"What You Saw is Not What You Get: Domain Adaptation Using Asymmetric
+Kernel Transforms"</a>
+In Proc. IEEE Conference on Computer Vision and Pattern Recognition
+(CVPR), 2011.
+</p>
+<p class="MsoNormal">K. Saenko, B. Kulis, M. Fritz and T.
+Darrell, <a href="http://www.cs.uml.edu/~saenko/saenko_eccv_2010.pdf">"Adapting
+Visual Category Models to New
+Domains"</a> In Proc. ECCV, September 2010, <st1:city w:st="on">Heraklion,
+Greece. [<a href="http://www.cs.uml.edu/~saenko/code/DomainTransformsECCV10_v1.tar.gz">code</a>]
+[<a href="http://www.cs.uml.edu/~saenko/projects.html#data">dataset</a>]</st1:city>
+[<a href="https://www.eecs.berkeley.edu/~jhoffman/domainadapt/#datasets_code">more code</a>].
+</p>
+</div>
+</div>
+<div class="post">
+<h2 class="title"><a name="data"></a>Database
+for Studying Effects of
+Domain Shift in Object Recognition</h2>
+<p class="meta">Last updated: September 2011</p>
+<div class="entry">
+<p class="MSONormal"><img style="width: 310px; height: 185px; float: right;" alt="dataset" src="./old_projects_files/dataset.png" hspace="10" vspace="5">Effects
+of domain shift have been largely overlooked in previous object
+recognition studies. We collected a database that allows researchers to
+study, evaluate and compare solutions to the domain shift problem by
+establishing a multiple-domain labeled dataset and benchmark. In
+addition to the domain shift aspects, this database also proposes a
+challenging office environment category learning task which reflects
+the difficulty of real-world indoor robotic object recognition, and may
+serve as a useful testbed for such tasks. It contains a total of 4652
+images of 31 categories originating from the following three domains:
+images from the web, digital SLR and webcam. For further details please
+refer to our paper.</p>
+<p class="MSONormal">If you use the dataset in your
+research, please cite:</p>
+<p class="MSONormal">K. Saenko, B. Kulis, M. Fritz and T.
+Darrell, <a href="http://www.cs.uml.edu/~saenko/saenko_eccv_2010.pdf">"Adapting
+Visual Category Models to New
+Domains"</a> In Proc. ECCV, September 2010, <st1:city w:st="on">Heraklion,
+Greece.</st1:city></p>
+<p class="MSONormal">Download the database:&nbsp;<a href="http://www.cs.uml.edu/~saenko/data/domain_adaptation_images.tar.gz">images</a>,
+<a href="http://www.cs.uml.edu/~saenko/data/domain_adaptation_features_20110616.tar.gz">SURF features</a>,
+<a href="http://www.cs.uml.edu/~saenko/data/domain_adaptation_features_20110928.tar.gz">SURF features
+and object ids</a>,
+ <span style="color: rgb(200, 0, 0);">NEW</span>
+<a href="http://www.cs.uml.edu/~saenko/data/domain_adaptation_decaf_features_20140430.tar.gz">DeCAF features</a>.
+</p>
+
+<p class="MSONormal">The DeCAF features are deep convolutional features computed using the framework in: </p>
+
+<p class="MSONormal"> J. Donahue, Y. Jia, O. Vinyals, J. Hoffman, N. Zhang, E. Tzeng, T. Darrell. 
+<a href="http://arxiv.org/abs/1310.1531">"DeCAF: A Deep Convolutional Activation Feature for Generic Visual Recognition"</a> 
+International Conference in Machine Learning (ICML), 2014.
+</p>
+
+<p>See also the <a href="https://www.eecs.berkeley.edu/~jhoffman/domainadapt/">Domain Adaptation Project</a> webpage for more results on this dataset and links to software.
+</p>
+
+
+</div>
+
+</div>
+
+<div class="post">
+<h2 class="title"><a name="VS"></a>Visual
+Sense disambiguation</h2>
+<p class="meta">Last updated: September 2011</p>
+<div class="entry">
+<p class="MSONormal"><img style="float: right; width: 322px; height: 131px;" alt="visual senses" src="./old_projects_files/senses.png" hspace="10" vspace="5">Polysemy
+is a problem for methods that exploit image search engines to build
+object category models. Previously, unsupervised approaches did not
+take word sense into consideration. We propose a new method that uses a
+dictionary to learn models of visual word sense from a large collection
+of unlabeled web data. The use of LDA to discover a latent sense space
+makes the model robust despite the very limited nature of dictionary
+definitions. The definitions are used to learn a distribution in the
+latent space that best represents a sense. The algorithm then uses the
+text surrounding image links to retrieve images with high probability
+of a particular dictionary sense.</p>
+<p class="MSONormal">We also argue
+that images associated with an abstract word sense
+should be excluded when training a visual classifier to learn a model
+of a physical
+object. While image clustering can group together visually coherent
+sets of returned
+images, it can be difficult to distinguish whether an image cluster
+relates to
+a desired object or to an abstract sense of the word. We propose a
+method that exploits the semantic structure of Wordnet to remove
+abstract senses. Our model does not require any human supervision, and
+takes as input only the name of an object category. We show results of
+retrieving
+concrete-sense images in two multimodal, multi-sense databases, as well
+as experiment with object classifiers trained on concrete-sense images
+returned by
+our method for a set of ten common office objects.</p>
+<p class="MSONormal">Papers:</p>
+<p class="MsoNormal">K,
+Saenko and T. Darrell, <a href="http://www.cs.uml.edu/~saenko/saenko_nips_2009.pdf">"Filtering
+Abstract Senses From Image Search
+Results´ </a>In Proc. NIPS, December 2009, <st1:city w:st="on"><st1:place w:st="on">Vancouver</st1:place></st1:city>,
+<st1:country-region w:st="on">Canada</st1:country-region>.</p>
+<p class="MsoNormal">K,
+Saenko and T. Darrell, <a href="http://www.cs.uml.edu/~saenko/saenko_nips08.pdf">"Unsupervised
+Learning of Visual Sense Models for
+Polysemous Words"</a>. Proc. NIPS, December 2008, <st1:city w:st="on"><st1:place w:st="on">Vancouver</st1:place></st1:city>,
+<st1:country-region w:st="on">Canada</st1:country-region>.</p>
+<p class="MSONormal">Download: <a href="http://www.cs.uml.edu/~saenko/projects.html#">README</a>,&nbsp;<a href="http://www.cs.uml.edu/~saenko/projects.html#">data</a>.(coming soon)<br>
+</p>
+<p class="MSONormal"> </p>
+</div>
+</div>
+</div>
+<!-- end #content -->
+<div id="sidebar"><big>
+<ul>
+<h2>Projects</h2>
+<li><ul>
+<li style="text-align: left;"><small><a href="http://www.cs.uml.edu/~saenko/projects.html#DERENDERING"><big>Probabilistic Color De-rendering</big></a></small></li><li style="text-align: left;"><a href="http://www.cs.uml.edu/~saenko/projects.html#DA">Domain Adaptation</a></li>
+<li style="text-align: left;"><a href="http://www.cs.uml.edu/~saenko/projects.html#data">"Office" Domain Adaptation Dataset</a></li>
+<li style="text-align: left;"><a href="http://www.cs.uml.edu/~saenko/projects.html#VS">Visual Sense Disambiguation</a></li>
+</ul>
+</li>
+</ul>
+</big></div>
+<!-- end #sidebar -->
+<div style="clear: both;"><big><big>&nbsp;</big></big></div>
+</div>
+</div>
+<!-- end #page -->
+<div id="footer">
+<p>Copyright (c) 2011 Kate Saenko. All
+rights reserved. Design
+by <a href="http://www.freecsstemplates.org/">Free CSS
+Templates</a>.</p>
+</div>
+<!-- end #footer --></div>
+<script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof(lastpass_f.lpsubmitorig2)=='object'){ continue;}lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ if (typeof(d.innerText) != 'undefined') { d.innerText=i; } else { d.textContent=i; } } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>

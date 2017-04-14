@@ -1,0 +1,42 @@
+Matlab implementation of Domain Adaptation methods described in:
+
+Adapting Visual Category Models to New Domains,
+Kate Saenko, Brian Kulis, Mario Fritz, and Trevor Darrell, 
+11th European Conference on Computer Vision (ECCV), 2010.
+
+This code has been tested on Matlab R2009b on a Linux system.
+
+To use the code, 
+
+(1) download the Domain Adaptaion Dataset (requires 250MB of space): 
+    
+    http://www.icsi.berkeley.edu/~saenko/projects.html
+
+(2) edit "domainshift_demo.m" to point to the directory where the 
+    dataset is located on your machine, and to set the configuration
+    file (for example configurations, see config_files/ directory)
+
+(3) run "domainshift_demo.m" in MATLAB
+
+The script evaluates several methods on the domain shift from 
+domain "A" to domain "B", using parameters set in the configuration 
+file. It outputs the results, e.g.:
+
+Accuracy of kNN (k=1) on B, for domain A=webcam, domain B=dslr
+
+     method:  Euclid    Euclid  ITML    ITML    Asymm   Symm
+--------------------------------------------------------------
+tform train:  n/a       n/a     A+B     B       A+B     A+B   
+ train data:  A         A+B     A       B       A       A     
+   accuracy:  0.26      0.59    0.31    0.53    0.67    0.71 
+
+--------------------------------------------------------------
+
+where "ITML" refers to Information-Theoretic Metric Learning, "Euclid"
+to simple Euclidean distance, and "Asymm" and "Symm" are domain
+transform methods presented in the paper. The first row shows which 
+domain(s) the metric/transform was trained on. The second row shows
+which domain(s) the k-nearest neighbors classifier was trained on.
+In all cases, test data comes from the target (B) domain.
+
+Contact saenko@eecs.berkeley.edu if you have any questions about the code.

@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Computer Vision and Learning Group at UMass Lowell</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+		.PicBorder{
+		width:200px;
+		height:200px;
+		}
+		.publogo { width: 100 px; margin-right : 20px; float : left; border : 0;}
+		.publication { clear : left; padding-bottom : 0px; }
+		.publication p { height : 100px; padding-top : 5px;}
+		.publication strong a { color : #0000A0; }
+		.publication .links { position : relative; top : 15px }
+		.publication .links a { margin-right : 20px; }
+		.codelogo { margin-right : 10px; float : left; border : 0;}
+		.code { clear : left; padding-bottom : 10px; vertical-align :middle;} 
+		.code .download a { display : block; margin : 0 15px; float : left;}
+		.code strong a { color : #000; }
+		.external a { margin : 0 10px; }
+		.external a.first { margin : 0 10px 0 0; }
+		.personal {width:100px;height:100px;}
+		.pfloat {float:left;margin: 20px 100px 20px 1px;}
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="wrapper" >
+      <header class="without-description">
+	<a href=""><img src="images/logohorz.gif" height="80"/></a>
+        <p></p>
+      </header>  
+	  
+      <section style="height:800px" >
+	<!--Menu Part begin-->
+	<div style="width:10%;float:left;display:inline;" align="left">
+	<ul style="width:120px;" id="menu">
+	<li style="background-color:#F4F4FC"><a href="index.html">Home</a></li>	
+	<li style="background-color:#afdfe4"><a href="people.html">People</a></li>
+	<li style="background-color:#F4F4FC"><a href="research.html">Research</a></li>	
+	<li style="background-color:#afdfe4"><a href="publication.html">Publications</a></li>	
+	<li style="background-color:#F4F4FC"><a href="teaching.html">Teaching</a></li>
+	</ul>
+	</div>		
+	<!--Menu end-->
+	<div style="width:90%;float:left;display:inline;" id="alternative">
+        <!--******************************************-->
+	<!--begin page content, edit you own page here-->
+
+<h2>Video to text: automatic natural language description of video</h2>
+
+<p><em>In collaboration with UT Austin and UC Berkeley</em></p>
+
+<img style="width: 400px; float: right;" alt="video2text" src="figs/youtube2text.png" hspace="10" vspace="5"> 
+<p>
+Many core tasks in artificial intelligence require joint modeling of visual data and natural language. The past few years have seen increasing recognition of this problem, with research on connecting words and names to pictures, storytelling based on static images, and visual grounding of natural-language instructions for robotics. This project focuses on generating natural language descriptions that capture sequences of activities depicted in diverse video corpora. The major obstacles to scalable "in-the-wild" video description are limited training data, extreme diversity of visual and language content, and lack of rich and robust representations. We tackle these obstacles by learning the underlying semantics of activities jointly from described video and from available text-only sources, and use them to both constrain visual recognition and to drive text generation.
+</p>
+
+<p>
+<a href="http://www.eecs.berkeley.edu/~sguada/youtube2text.html">Youtube Dataset</a>
+</p>
+
+<p><strong>Papers:</strong></p>
+
+<p>
+<a href="http://arxiv.org/abs/1505.05914">A Multi-scale Multiple Instance Video Description Network.</a> Huijuan Xu, Subhashini Venugopalan, Vasili Ramanishka, Marcus Rohrbach, Kate Saenko. ICCV15 workshop on Closing the Loop Between Vision and Language
+</p>
+
+<p>
+<a href="http://arxiv.org/abs/1411.4389">Long-term Recurrent Convolutional Networks for Visual Recognition and Description.</a>
+Jeff Donahue, Lisa Hendricks, Sergio Guadarrama, Marcus Rohrbach, Subhashini Venugopalan, Kate Saenko, Trevor Darrell. CVPR 2015.
+[<a href="http://jeffdonahue.com/lrcn/">Project Website & Code</a>]
+</p>
+
+<p>
+<a href="http://www.cs.utexas.edu/~ai-lab/downloadPublication.php?filename=http://www.cs.utexas.edu/users/ml/papers/venugopalan.naacl15.pdf&pubid=127495">Translating Videos to Natural Language Using Deep Recurrent Neural Networks. </a>
+Subhashini Venugopalan, Huijun Xu, Jeff Donahue, Marcus Rohrbach, Raymond Mooney, Kate Saenko. NAACL 2015
+</p>
+
+<p>
+<a href="http://anthology.aclweb.org/C/C14/C14-1115.pdf">Integrating language and vision to generate natural language descriptions of videos in the wild.</a>
+J. Thomason, S. Venugopalan, S. Guadarrama, K. Saenko, and R. Mooney. 
+In Proceedings of the 25th International Conference on Computational Linguistics (COLING), August 2014.
+</p>
+
+<p>
+<a href="http://www.eecs.berkeley.edu/~sguada/pdfs/2013-ICCV-YouTube2Text-final.pdf">Youtube2text: Recognizing and describing arbitrary activities using semantic hierarchies and zero-shot recognition.</a>
+Sergio Guadarrama, Niveda Krishnamoorthy, Girish Malkarnenkar, Subhashini Venugopalan, Raymond Mooney, Trevor Darrell, and Kate Saenko; In IEEE International Conference on Computer Vision (ICCV) 2013.
+[<a href="http://www.eecs.berkeley.edu/~sguada/youtube2text.html">dataset</a>]
+</p>
+        <!--******************************************-->
+	<!--end of page content-->
+	</div>
+      </section>
+  
+      <script src="external/jquery/jquery.js"></script>
+      <script src="jquery-ui.js"></script>
+      <script>
+	$( "#menu" ).menu();
+      </script>		     
+      <footer>
+	<p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+      </footer>
+      <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>

@@ -1,0 +1,32 @@
+
+/* start body settings here */
+body{font-family:Verdana,Arial,Helvetica,sans-serif; font-size:12px}
+/* overall frame size here */
+#frame{width:780px; margin:0 auto}
+/* link style here*/
+a:link {color: #0066FF; text-decoration: none;}
+a:visited {color: #0066FF; text-decoration: none;}
+a:hover {color: #0066FF; text-decoration: underline; }
+a:active {color: #0066FF; text-decoration: none;}
+/* create header here */
+#header{ width:780px;height:80px; background:#09f; border:1px solid #ebebeb}
+#header h4{ font-size:24px;  color:#fff;  margin:20px 0px 0px 0px;  padding:0px 0px 0px 10px}
+/* build container here */
+#container {width:780px; margin:0 auto; padding: 5px 0px 0px 1px;}
+/* left navigation starts here */
+#left{float:left; width:200px}
+#left h4{ font-size:14px;  color:#ffffff;  margin:0px 0px 0px 0px;  padding:2px 0px 2px 5px; background:#05054e}
+#left ul{margin:0px; padding:2px 0px 0px 0px}
+#left li{padding:2px 0 4px 0; list-style:none}
+#left ul li a{text-decoration:none; font-size:12px}
+#left ul li a:hover{color:#999; text-decoration:underline}
+/* create content area here */
+#content{width:570px; float:right}
+#content h4{ font-size:14px;  color:#ffffff;  margin:0px 0px 0px 0px;  padding:2px 0px 2px 5px; background:#05054e}
+#content p {font-size:12px; padding: 5px 0px 5px 0px; margin: 0px 0px 0px 0px; line-height: 16px;}
+/* the footer starts here */
+#footer{clear:both;text-align:center; padding:0px 0px 5px 0px; border-top: 1px #e9e9e9 solid}
+#footer p{ color:ffffff; clear:both;text-align:center; padding:0px 0px 5px 0px;}
+/* Our copyr5ight text link here "Please Do Not Remove" */
+.copyright {font-size: x-small; color:0066ff; text-decoration:none;}
+

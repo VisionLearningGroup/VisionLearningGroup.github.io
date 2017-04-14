@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Computer Vision and Learning Group at UMass Lowell</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+		.PicBorder{
+		width:200px;
+		height:200px;
+		}
+		.publogo { width: 100 px; margin-right : 20px; float : left; border : 0;}
+		.publication { clear : left; padding-bottom : 0px; }
+		.publication p { height : 100px; padding-top : 5px;}
+		.publication strong a { color : #0000A0; }
+		.publication .links { position : relative; top : 15px }
+		.publication .links a { margin-right : 20px; }
+		.codelogo { margin-right : 10px; float : left; border : 0;}
+		.code { clear : left; padding-bottom : 10px; vertical-align :middle;} 
+		.code .download a { display : block; margin : 0 15px; float : left;}
+		.code strong a { color : #000; }
+		.external a { margin : 0 10px; }
+		.external a.first { margin : 0 10px 0 0; }
+		.personal {width:100px;height:100px;}
+		.pfloat {float:left;margin: 20px 100px 20px 1px;}
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="wrapper" >
+      <header class="without-description">
+	<a href=""><img src="images/logohorz.gif" height="80"/></a>
+        <p></p>
+      </header>  
+	  
+      <section style="height:800px" >
+	<!--Menu Part begin-->
+	<div style="width:10%;float:left;display:inline;" align="left">
+	<ul style="width:120px;" id="menu">
+	<li style="background-color:#F4F4FC"><a href="index.html">Home</a></li>	
+	<li style="background-color:#afdfe4"><a href="people.html">People</a></li>
+	<li style="background-color:#F4F4FC"><a href="research.html">Research</a></li>	
+	<li style="background-color:#afdfe4"><a href="publication.html">Publications</a></li>	
+	<li style="background-color:#F4F4FC"><a href="teaching.html">Teaching</a></li>
+	</ul>
+	</div>		
+	<!--Menu end-->
+	<div style="width:90%;float:left;display:inline;" id="alternative">
+        <!--******************************************-->
+	<!--begin page content, edit you own page here-->
+
+<h2>Visual Sense Disambiguation</h2>
+
+
+<img style="float: right; width: 322px; height: 131px;" alt="visual senses" src="./old_projects_files/senses.png" hspace="10" vspace="5">
+
+<p><strong>Polysemy</strong>
+is a problem for methods that exploit image search engines to build
+object category models. Previously, unsupervised approaches did not
+take word sense into consideration. We propose a new method that uses a
+dictionary to learn models of visual word sense from a large collection
+of unlabeled web data. The use of LDA to discover a latent sense space
+makes the model robust despite the very limited nature of dictionary
+definitions. The definitions are used to learn a distribution in the
+latent space that best represents a sense. The algorithm then uses the
+text surrounding image links to retrieve images with high probability
+of a particular dictionary sense.</p>
+
+<p>
+We also argue
+that images associated with an abstract word sense
+should be excluded when training a visual classifier to learn a model
+of a physical
+object. While image clustering can group together visually coherent
+sets of returned
+images, it can be difficult to distinguish whether an image cluster
+relates to
+a desired object or to an abstract sense of the word. We propose a
+method that exploits the semantic structure of Wordnet to remove
+abstract senses. Our model does not require any human supervision, and
+takes as input only the name of an object category. We show results of
+retrieving
+concrete-sense images in two multimodal, multi-sense databases, as well
+as experiment with object classifiers trained on concrete-sense images
+returned by
+our method for a set of ten common office objects.</p>
+
+<p><strong>Papers:</strong></p>
+
+K. Saenko and T. Darrell, <a href="http://www.cs.uml.edu/~saenko/saenko_nips_2009.pdf">"Filtering Abstract Senses From Image Search Results"</a>In Proc. NIPS, December 2009, Vancouver, Canada.
+<br>
+K. Saenko and T. Darrell, <a href="http://www.cs.uml.edu/~saenko/saenko_nips08.pdf">"Unsupervised Learning of Visual Sense Models for Polysemous Words"</a>. Proc. NIPS, December 2008, Vancouver, Canada. <a href="https://drive.google.com/open?id=0B4IapRTv9pJ1SGFyeS1wYkVKNzg">Yahoo sense dataset</a>.<br>
+
+
+
+        <!--******************************************-->
+	<!--end of page content-->
+	</div>
+      </section>
+  
+      <script src="external/jquery/jquery.js"></script>
+      <script src="jquery-ui.js"></script>
+      <script>
+	$( "#menu" ).menu();
+      </script>		     
+      <footer>
+	<p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+      </footer>
+      <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>

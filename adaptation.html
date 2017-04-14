@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Computer Vision and Learning Group at UMass Lowell</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link href="jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+		.PicBorder{
+		width:200px;
+		height:200px;
+		}
+		.publogo { width: 100 px; margin-right : 20px; float : left; border : 0;}
+		.publication { clear : left; padding-bottom : 0px; }
+		.publication p { height : 100px; padding-top : 5px;}
+		.publication strong a { color : #0000A0; }
+		.publication .links { position : relative; top : 15px }
+		.publication .links a { margin-right : 20px; }
+		.codelogo { margin-right : 10px; float : left; border : 0;}
+		.code { clear : left; padding-bottom : 10px; vertical-align :middle;} 
+		.code .download a { display : block; margin : 0 15px; float : left;}
+		.code strong a { color : #000; }
+		.external a { margin : 0 10px; }
+		.external a.first { margin : 0 10px 0 0; }
+		.personal {width:100px;height:100px;}
+		.pfloat {float:left;margin: 20px 100px 20px 1px;}
+    </style>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+    <div class="wrapper" >
+      <header class="without-description">
+	<a href=""><img src="images/logohorz.gif" height="80"/></a>
+        <p></p>
+      </header>  
+	  
+      <section style="height:800px" >
+	<!--Menu Part begin-->
+	<div style="width:10%;float:left;display:inline;" align="left">
+	<ul style="width:120px;" id="menu">
+	<li style="background-color:#F4F4FC"><a href="index.html">Home</a></li>	
+	<li style="background-color:#afdfe4"><a href="people.html">People</a></li>
+	<li style="background-color:#F4F4FC"><a href="research.html">Research</a></li>	
+	<li style="background-color:#afdfe4"><a href="publication.html">Publications</a></li>	
+	<li style="background-color:#F4F4FC"><a href="teaching.html">Teaching</a></li>
+	</ul>
+	</div>		
+	<!--Menu end-->
+	<div style="width:90%;float:left;display:inline;" id="alternative">
+        <!--******************************************-->
+	<!--begin page content, edit you own page here-->
+
+<h2>Domain Adaptation for Object recognition</h2>
+
+<img style="width: 307px; height: 127px; float: right;" alt="dataset shift" src="./old_projects_files/domain_shift.png" hspace="10" vspace="5"> 
+<p>
+Domain adaptation is an important emerging topic in computer vision. This project investigates domain
+shift in the context of object recognition.
+We introduced a method that adapts object models acquired in a
+particular visual domain to new imaging conditions by learning a
+transformation that minimizes the effect of domain-induced changes in
+the feature distribution. The transformation is learned in a supervised
+manner and can be applied to categories for which there are no labeled
+examples in the new domain. While we focus our evaluation on object
+recognition tasks, the transform-based adaptation technique we develop
+is general and could be applied to non-image data. We
+experimentally demonstrate the ability of our method to improve
+recognition on categories with few or no target domain labels and
+moderate to large changes in the imaging conditions.</p>
+
+<p>Please visit the <a href="https://www.eecs.berkeley.edu/~jhoffman/domainadapt/">Domain Adaptation Project</a> webpage for more details and software.
+</p>
+
+<h2>Database for Studying Effects of Domain Shift in Object Recognition</h2>
+
+<p class="MSONormal"><img style="width: 310px; height: 185px; float: right;" alt="dataset" src="./old_projects_files/dataset.png" hspace="10" vspace="5">
+<p>
+Effects of domain shift have been largely overlooked in previous object
+recognition studies. We collected a database that allows researchers to
+study, evaluate and compare solutions to the domain shift problem by
+establishing a multiple-domain labeled dataset and benchmark. In
+addition to the domain shift aspects, this database also proposes a
+challenging office environment category learning task which reflects
+the difficulty of real-world indoor robotic object recognition, and may
+serve as a useful testbed for such tasks. It contains a total of 4652
+images of 31 categories originating from the following three domains:
+images from the web, digital SLR and webcam. </p>
+
+<p>If you use the dataset in your research, please cite:</p>
+
+K. Saenko, B. Kulis, M. Fritz and T. Darrell, 
+<a href="http://www.cs.uml.edu/~saenko/saenko_eccv_2010.pdf">"Adapting Visual Category Models to New Domains"</a> In Proc. ECCV, September 2010, <st1:city w:st="on">Heraklion, Greece.</p>
+
+
+<p><strong>Download the database: </strong>
+<!--
+<a href="http://www.cs.uml.edu/~saenko/data/domain_adaptation_images.tar.gz">images</a>,
+<a href="http://www.cs.uml.edu/~saenko/data/domain_adaptation_features_20110616.tar.gz">SURF features</a>,
+<a href="http://www.cs.uml.edu/~saenko/data/domain_adaptation_features_20110928.tar.gz">SURF features and object ids</a>,
+<span style="color: rgb(200, 0, 0);">NEW</span>
+<a href="http://www.cs.uml.edu/~saenko/data/domain_adaptation_decaf_features_20140430.tar.gz">DeCAF features</a>.
+-->
+
+<a href="https://drive.google.com/open?id=0B4IapRTv9pJ1WGZVd1VDMmhwdlE">images</a>,
+<a href="https://drive.google.com/open?id=0B4IapRTv9pJ1WTVSd2FIcW4wRTA">SURF features</a>,
+<a href="https://drive.google.com/open?id=0B4IapRTv9pJ1aWxLY0kxN0JJeXM">SURF features and object ids</a>,
+<span style="color: rgb(200, 0, 0);">NEW</span>
+<a href="https://drive.google.com/open?id=0B4IapRTv9pJ1eloxMmVNQ2IzS00">DeCAF features</a>.
+
+</p>
+
+<p>The DeCAF features are deep convolutional neural network features computed using the framework in: </p>
+
+J. Donahue, Y. Jia, O. Vinyals, J. Hoffman, N. Zhang, E. Tzeng, T. Darrell. 
+<a href="http://arxiv.org/abs/1310.1531">"DeCAF: A Deep Convolutional Activation Feature for Generic Visual Recognition"</a> 
+International Conference in Machine Learning (ICML), 2014.
+<br>
+<br>
+<p>See also the <a href="https://www.eecs.berkeley.edu/~jhoffman/domainadapt/">Domain Adaptation Project</a> webpage for more results on this dataset and links to software.
+</p>
+
+
+<p><strong>Papers:</strong></p>
+B. Kulis, K. Saenko, and T. Darrell, <a href="http://www.cs.uml.edu/~saenko/cvpr_adapt.pdf">
+"What You Saw is Not What You Get: Domain Adaptation Using Asymmetric
+Kernel Transforms"</a>
+In Proc. IEEE Conference on Computer Vision and Pattern Recognition
+(CVPR), 2011.
+<br>
+K. Saenko, B. Kulis, M. Fritz and T.Darrell, <a href="http://www.cs.uml.edu/~saenko/saenko_eccv_2010.pdf">"Adapting
+Visual Category Models to New Domains"</a> In Proc. ECCV, September 2010, Heraklion,
+Greece. [<a href="./code/DomainTransformsECCV10_v1.tar.gz">code</a>]
+[<a href="https://www.eecs.berkeley.edu/~jhoffman/domainadapt/#datasets_code">more code</a>].
+
+        <!--******************************************-->
+	<!--end of page content-->
+	</div>
+      </section>
+  
+      <script src="external/jquery/jquery.js"></script>
+      <script src="jquery-ui.js"></script>
+      <script>
+	$( "#menu" ).menu();
+      </script>		     
+      <footer>
+	<p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+      </footer>
+      <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>
