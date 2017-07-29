@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>R-C3D</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#34a853;border-color:#34a853">
+          <!-- Brand and toggle get grouped for better mobile display -->
+        <!--<div class="container">-->
+
+          <!--<div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          -->
+    
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+      	      <li role="presentation"> <a href="#overview">Overview</a></li>
+              <li role="presentation"> <a href="#code">Code</a></li>
+              <li role="presentation"> <a href="#refs">Reference</a></li>
+              <!--<li><a href="./index.html#Contact">Contact</a></li>-->
+            </ul>
+          <!-- </div>--> <!--/.navbar-collapse -->
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+    <div class="home-intro" style="padding: 5% 10%">
+      <div class="row">
+          <h1 align="center">R-C3D: Region Convolutional 3D Network for Temporal Activity Detection</h1>
+      </div>
+          <!--<div class="highlight-box">
+           <h2>
+           <div class="center-pills">
+           <ul class="nav nav-pills">
+          <li role="presentation"> <a href="#abstract">Abstract</a></li> 
+          <li role="presentation"> <a href="#overview">Overview</a></li> 
+          <li role="presentation"> <a href="#examples">Examples</a></li> 
+          <li role="presentation"> <a href="#code">Code</a></li> 
+          <li role="presentation"> <a href="#refs">Reference</a></li>
+           </ul>
+          </div>
+          </h2>
+          </div>
+          -->
+
+          <div class="project-page">
+          <a name="abstract"></a>
+          <h2>Abstract</h2>
+          <p class="text-justify">
+    We address the problem of activity detection in continuous, untrimmed video streams. This is a difficult task that requires extracting meaningful spatio-temporal features to capture activities, accurately localizing the start and end times of each activity, and also dealing with very large data volumes. 
+We introduce a new model, \textit{Region Convolutional 3D Network (R-C3D)}, which encodes the video streams using a three-dimensional fully convolutional network, then generates candidate temporal regions containing activities, and finally classifies selected regions into specific activities. Computation is saved due to the sharing of convolutional features between the proposal and the classification pipelines.
+The entire model is trained end-to-end with jointly optimized localization and classification losses. R-C3D is faster than existing methods (569 frames per second on a single Titan X Maxwell GPU) and achieves state-of-the-art results on THUMOS'14 (10% absolute improvement).
+We further demonstrate that our model is a general activity detection framework that does not rely on assumptions about particular dataset properties by evaluating our approach on ActivityNet and Charades.
+          </p>
+          <center>
+          <a
+          href="https://arxiv.org/pdf/1703.07814.pdf" target="_blank" class="btn btn-danger" role="button">PDF</a>
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+        
+	  <div class="project-page">
+                <a name="overview"></a>
+                <h2>Overview</h2>
+                <center>
+                        <div class="col-md-12">
+                        <div class="center-block">
+                                <img alt="License" src="imgs/R-C3D_High_Level_Schematic.png"></img>
+                        </div>
+                        </div>
+
+                        <!--<p class="lead">An overview of the approach.</p>-->
+                </center>	
+			
+                <!--<div class="row">
+		<center>
+                
+			<div class="col-md-1" ></div>
+			<div class="col-md-10">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item"
+					src="https://www.youtube.com/embed/oOvN5O6gFpE?vq=hd720"
+					allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class="col-md-1" ></div>
+		</center>
+                </div> -->
+		
+          </div>
+        
+
+
+    <hr class="soften"></hr>
+          <div class="project-page">
+	    <a name="code"></a>
+            <h2>Code</h2>
+
+
+            <p class="lead">
+            The code to prepare data and train the model will be published soon
+            <!--</br>
+            <a href="https://github.com/VisionLearningGroup/caption-guided-saliency" target="_blank">https://github.com/VisionLearningGroup/caption-guided-saliency</a>
+            </br>-->
+            </p>
+          </div>
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          
+          <a name="refs"></a>
+          <h2>Reference</h2>
+          <p class="lead">
+          If you find this useful in your work please consider citing:
+          <div class="highlight">
+          <pre> <code> 
+          @inproceedings{Xu2017iccv,
+          title = {R-C3D: Region Convolutional 3D Network for Temporal Activity Detection},
+          author = {Huijuan Xu and Abir Das and Kate Saenko},
+          booktitle = {Proceedings of the International Conference on Computer Vision (ICCV)},
+          year = {2017}
+          }
+          </code> </pre>
+
+          </div>
+
+    </div>
+    </div> <!--container-->
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted text-center" style="padding-top: 10px">
+                <a title="Creative Commons Attribution 4.0 International license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+                  <img alt="License" src="imgs/cca4-88x31.png"></img>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+  </body>
+</html>
+
