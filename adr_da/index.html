@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADR</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#34a853;border-color:#34a853">
+          <!-- Brand and toggle get grouped for better mobile display -->
+        <!--<div class="container">-->
+
+          <!--<div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          -->
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+      	      <li role="presentation"> <a href="#overview">Overview</a></li>
+              <li role="presentation"> <a href="#code">Code</a></li>
+            <li role="presentation"> <a href="#refs">Reference</a></li>
+              <!--<li><a href="./index.html#Contact">Contact</a></li>-->
+            </ul>
+          <!-- </div>--> <!--/.navbar-collapse -->
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+    <div class="home-intro" style="padding: 5% 10%">
+      <div class="row">
+          <h1 align="center">Adversarial Dropout Reguralization</h1>
+      </div>
+          <!--<div class="highlight-box">
+           <h2>
+           <div class="center-pills">
+           <ul class="nav nav-pills">
+          <li role="presentation"> <a href="#abstract">Abstract</a></li>
+          <li role="presentation"> <a href="#overview">Overview</a></li>
+          <li role="presentation"> <a href="#examples">Examples</a></li>
+          <li role="presentation"> <a href="#code">Code</a></li>
+          <li role="presentation"> <a href="#refs">Reference</a></li>
+           </ul>
+          </div>
+          </h2>
+          </div>
+          -->
+
+          <div class="project-page">
+          <a name="abstract"></a>
+          <h2>Abstract</h2>
+          <p class="text-justify">
+  We present a domain adaptation method for transferring neural representations from label-rich source domains to unlabeled target domains. Recent adversarial methods proposed for this task learn to align features across domains by ``fooling'' a special domain classifier network. However, a drawback of this approach is that the domain classifier simply labels the generated features as in-domain or not, without considering the boundaries between classes. This means that ambiguous target features can be generated near class boundaries, reducing target classification accuracy. We propose a novel approach, Adversarial Dropout Regularization (ADR), which encourages the generator to output more discriminative features for the target domain. Our key idea is to replace the traditional domain critic with a critic that detects non-discriminative features by using dropout on the classifier network. The generator then learns to avoid these areas of the feature space and thus creates better features. We apply our ADR approach to the problem of unsupervised domain adaptation for image classification and semantic segmentation tasks, and demonstrate significant improvements over the state of the art.
+          </p>
+          <center>
+          <a
+          href="https://openreview.net/pdf?id=HJIoJWZCZ" target="_blank" class="btn btn-danger" role="button">PDF</a>
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+
+	  <div class="project-page">
+                <a name="overview"></a>
+                <h2>Overview</h2>
+                        <!--div class="col-md-12" -->
+                        <p class="center-block">
+                <center>
+                          <img alt="License" src="imgs/adr_da.png" width = "700 px"></img>
+                </center>
+                        </p>
+                        <!--/div -->
+
+                        <!--<p class="lead">An overview of the approach.</p>-->
+
+                <!--<div class="row">
+		<center>
+
+			<div class="col-md-1" ></div>
+			<div class="col-md-10">
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item"
+					src="https://www.youtube.com/embed/oOvN5O6gFpE?vq=hd720"
+					allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<div class="col-md-1" ></div>
+		</center>
+                </div> -->
+          </div>
+
+
+  <hr class="soften"></hr>
+          <div class="project-page">
+	    <a name="code"></a>
+            <h2>Code</h2>
+            <p class="lead">
+            The code can be found in
+            </br>
+            <a href="https://github.com/mil-tokyo/adr_da" target="_blank">https://github.com/mil-tokyo/adr_da</a>
+            </br>
+            </p>
+          </div>
+
+
+
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+
+          <a name="refs"></a>
+          <h2>Reference</h2>
+          <p class="lead">
+          If you find this useful in your work please consider citing:
+          <div class="highlight">
+          <pre> <code>
+    @article{saito2017adversarial,
+    title={Adversarial Dropout Regularization},
+    author={Saito, Kuniaki and Ushiku, Yoshitaka and Harada, Tatsuya and Saenko, Kate},
+    journal={arXiv preprint arXiv:1711.01575},
+    year={2017}
+    }
+          </code> </pre>
+
+          </div>
+    </div>
+    </div> <!--container-->
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted text-center" style="padding-top: 10px">
+                <a title="Creative Commons Attribution 4.0 International license" target="_blank" href="http://creativecommons.org/licenses/by/4.0/" rel="license">
+                  <img alt="License" src="imgs/cca4-88x31.png"></img>
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+  </body>
+</html>
