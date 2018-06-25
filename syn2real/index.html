@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Syn2Real: A New Benchmark for Synthetic-to-Real Visual Domain Adaptation</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#34a853;border-color:#34a853">
+    
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+      	      <li role="presentation"> <a href="#overview">Overview</a></li>
+      	      <li role="presentation"> <a href="#dataset">Dataset</a></li>
+              <li role="presentation"> <a href="#refs">Reference</a></li>
+              <!--<li><a href="./index.html#Contact">Contact</a></li>-->
+            </ul>
+          <!-- </div>--> <!--/.navbar-collapse -->
+
+        </div>
+    </nav>
+
+
+    <div class="container">
+
+    <div class="home-intro" style="padding: 5% 10%">
+      <div class="row">
+          <h1 align="center">Syn2Real: A New Benchmark for <br> Synthetic-to-Real Visual Domain Adaptation</h1>
+      </div>
+
+          <div class="project-page">
+          <a name="abstract"></a>
+          <h2>Abstract</h2>
+          <p class="text-justify">
+           Unsupervised transfer of object recognition models from synthetic to real data is an important problem with many potential applications. The challenge is how to "adapt" a model trained on simulated images so that it performs well on real-world data without any additional supervision. Unfortunately, current benchmarks for this problem are limited in size and task diversity. In this paper, we present a new large-scale benchmark called Syn2Real which consists of a synthetic domain rendered from 3D object models and two real-image domains containing the same object categories. We define three related  tasks on this benchmark: closed-set object classification, open-set object classification, and object detection.
+  Our evaluation of multiple state-of-the-art methods reveals a large gap in adaptation performance between the easier closed-set classification task and the more difficult open-set and detection tasks. We conclude that
+  developing adaptation methods that work well across all three tasks presents a significant future challenge for syn2real domain transfer. 
+
+</p>
+          <center>
+          <a
+          href="#" target="_blank" class="btn btn-danger" role="button">PDF</a>
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+        
+	  <div class="project-page">
+                <a name="overview"></a>
+                <h2>Overview</h2>
+		<br>
+                <center>
+                <img width="90%" alt="License" src="imgs/main.png"></img>
+                </center>	
+<br>                
+<p class="text-justify">
+We introduce Syn2Real, a synthetic-to-real visual domain adaptation benchmark meant to encourage further development of robust domain transfer methods. The goal is to train a model on a synthetic "source" domain and then update it so that its performance improves on a real "target" domain, without using any target annotations. It includes three tasks, illustrated in figures above: the more traditional <i>closed-set classification</i> task with a known set of categories; the less studied <i>open-set classification</i> task with unknown object categories in the target domain; and the <i>object detection</i> task, which involves localizing instances of objects by predicting their bounding boxes and corresponding class labels. 
+
+</p> <p class="text-justify">
+The Syn2Real benchmark focuses on <i>unsupervised</i> domain adaptation (UDA) for which the target domain images are not labeled. 
+ While there may be scenarios where target labels are available (enabling \textit{supervised} domain adaptation), the purely unsupervised case is more challenging and often more realistic.
+For each task, we provide a synthetic source domain and two real-image target domains.
+Many UDA evaluation protocols do not have a validation domain and use labeled target domain data to select hyperparameters. However, assuming labeled target data goes against the UDA problem statement. For this reason, we collect two \textit{different} target domains, one for  validation of hyperparameters and one for testing the models.
+
+</p> <p class="text-justify">
+For the closed-set classification task, we generate the largest synthetic-to-real dataset to date with over 280K images in the combined training, validation and test sets. We use this dataset to hold a public challenge, inviting researchers from all over the world to compete on this task, and analyze the performance of the top submitted methods. We find that for this task, where the object categories are known ahead of time, recent UDA models that leverage CNN features pre-trained on ImageNet are able to achieve impressive adaptation results. This is surprising, considering that labels are only available on synthetic source images and the source and target domains are very different. We provide a detailed analysis and insight into these results.
+</p> <p class="text-justify">
+
+We then push the boundaries of synthetic-to-real transfer beyond closed-set classification and design an open-set classification dataset, where the target domains contain images of additional unknown categories that were not present in the source dataset. We evaluate the state-of-the-art UDA methods available for this more difficult task, and find that there is still much room for improvement. 
+
+Furthermore, we propose an even more challenging object detection benchmark that covers a much more diverse set of object categories than previous syn2real detection datasets, and show that methods that excel for adaptation of classification models completely fail when applied to recent end-to-end detection models, potentially due to very low initial performance of source models on the target data. </p>
+          </div>
+	  
+
+	  <div class="project-page">
+                <h2>Examples</h2>
+		<br>
+                <center>
+                <img width="90%" alt="License" src="imgs/fig_2.png"></img>
+                </center>	
+	</div>
+  <hr class="soften"></hr>
+          <div class="project-page">
+	    <a name="dataset"></a>
+            <h2>Data and Code</h2>
+            <p class="lead">
+            The code along with data and instructions on how to run it can be found on websites of corresponding challeges we ran:
+            </br>
+            <a href="https://github.com/VisionLearningGroup/visda-2018-public" target="_blank">[openset and detection]</a>
+            <a href="https://github.com/VisionLearningGroup/taskcv-2017-public" target="_blank">[classification and segmentation]</a>
+            </br>
+            </p>
+          </div>
+
+
+    <hr class="soften"></hr>
+
+          <div class="project-page">
+          
+          <a name="refs"></a>
+          <h2>Reference</h2>
+          <p class="lead">
+          If you find this useful in your work please consider citing:
+          <div class="highlight">
+          <pre> <code> 
+TBD
+          </code> </pre>
+
+
+          </div>
+
+    </div>
+    </div> <!--container-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+  </body>
+</html>
+
