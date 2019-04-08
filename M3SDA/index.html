@@ -4,11 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Syn2Real: A New Benchmark for Synthetic-to-Real Visual Domain Adaptation</title>
+    <title>Moment Matching for Multi-Source Domain Adaptation</title>
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/template.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"
@@ -92,6 +100,58 @@
             <h2>Download</h2>
             <br>
 
+            <div class="table100 ver1 m-b-110">
+                <table data-vertable="ver1">
+                    <thead>
+                    <tr class="row100 head">
+                        <th class="column100 column1" data-column="column1"></th>
+                        <th class="column100 column2" data-column="column2">Clipart</th>
+                        <th class="column100 column3" data-column="column3">Infograph</th>
+                        <th class="column100 column4" data-column="column4">Painting</th>
+                        <th class="column100 column5" data-column="column5">Quickdraw</th>
+                        <th class="column100 column6" data-column="column6">Real</th>
+                        <th class="column100 column7" data-column="column7">Sketch</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">Data</td>
+                        <td class="column100 column2" data-column="column2">clipart.zip</td>
+                        <td class="column100 column3" data-column="column3"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/infograph.zip">infograph.zip</a><b>(4.0G)</b></td>
+                        <td class="column100 column4" data-column="column4">painting.zip</td>
+                        <td class="column100 column5" data-column="column5"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/quickdraw.zip">quickdraw.zip</a><b>(439M)</b></td>
+                        <td class="column100 column6" data-column="column6"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/real.zip">real.zip</a><b>(5.6G)</b></td>
+                        <td class="column100 column7" data-column="column7"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/sketch.zip">sketch.zip</a><b>(2.5G)</b></td>
+                    </tr>
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">Train</td>
+                        <td class="column100 column2" data-column="column2">clipart_train.txt</td>
+                        <td class="column100 column3" data-column="column3"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/infograph_train.txt">infograph_train.txt</a></td>
+                        <td class="column100 column4" data-column="column4">painting_train.txt</td>
+                        <td class="column100 column5" data-column="column5"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/quickdraw_train.txt">quickdraw_train.txt</a></td>
+                        <td class="column100 column6" data-column="column6"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/real_train.txt">real_train.txt</a></td>
+                        <td class="column100 column7" data-column="column7"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/sketch_train.txt">sketch_train.txt</a></td>
+                    </tr>
+                    <tr class="row100">
+                        <td class="column100 column1" data-column="column1">Test</td>
+                        <td class="column100 column2" data-column="column2">clipart_test.txt</td>
+                        <td class="column100 column3" data-column="column3"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/infograph_test.txt">infograph_test.txt</a></td>
+                        <td class="column100 column4" data-column="column4">painting_test.txt</td>
+                        <td class="column100 column5" data-column="column5"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/quickdraw_test.txt">quickdraw_test.txt</a></td>
+                        <td class="column100 column6" data-column="column6"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/real_test.txt">real_test.txt</a></td>
+                        <td class="column100 column7" data-column="column7"><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/sketch_test.txt">sketch_test.txt</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <ul>
+            <li>We retain the <i>clipart</i> and <i>painting</i> subset as we are going to hold a domain adaptation challenge.
+                These two domains will be used as the testing domain.
+            </li>
+                <li>Train/Test images are structured in folders as {domain}/{cateogory}/{object_id}.jpg (or .png)</li>
+            </ul>
 
             <br>
         </div>
@@ -105,9 +165,9 @@
 
                 </br>
                 <!--<a href="https://github.com/VisionLearningGroup/visda-2018-public" target="_blank">[openset and-->
-                    <!--detection]</a>-->
+                <!--detection]</a>-->
                 <!--<a href="https://github.com/VisionLearningGroup/taskcv-2017-public" target="_blank">[classification and-->
-                    <!--segmentation]</a>-->
+                <!--segmentation]</a>-->
                 TBD
                 </br>
             </p>
@@ -141,8 +201,8 @@
 
             <h2>Fair Use Notice</h2>
 
-<p>This dataset contains some copyrighted material whose use has not been specifically authorized by the copyright owners. In an effort to advance scientific research, we make this material available for academic research. We believe this constitutes a <strong>fair use</strong> of any such copyrighted material as provided for in section 107 of the US Copyright Law. In accordance with Title 17 U.S.C. Section 107, the material on this site is distributed without profit for non-commercial research and educational purposes. For more information on fair use please <a href="https://www.law.cornell.edu/uscode/text/17/107" title="Fair Use Notice">click here</a>. If you wish to use copyrighted material on this site or in our dataset for purposes of your own that go beyond non-commercial research and academic purposes, you must obtain permission directly from the copyright owner.
-<em>(adapted from <a href="http://people.cs.pitt.edu/~chris/photographer/">Christopher Thomas</a>)</em></p>
+            <p>This dataset contains some copyrighted material whose use has not been specifically authorized by the copyright owners. In an effort to advance scientific research, we make this material available for academic research. We believe this constitutes a <strong>fair use</strong> of any such copyrighted material as provided for in section 107 of the US Copyright Law. In accordance with Title 17 U.S.C. Section 107, the material on this site is distributed without profit for non-commercial research and educational purposes. For more information on fair use please <a href="https://www.law.cornell.edu/uscode/text/17/107" title="Fair Use Notice">click here</a>. If you wish to use copyrighted material on this site or in our dataset for purposes of your own that go beyond non-commercial research and academic purposes, you must obtain permission directly from the copyright owner.
+                <em>(adapted from <a href="http://people.cs.pitt.edu/~chris/photographer/">Christopher Thomas</a>)</em></p>
 
 
         </div>
