@@ -17,6 +17,7 @@
             <ul class="nav navbar-nav">
       	      <li role="presentation"> <a href="#overview">Overview</a></li>
       	      <li role="presentation"> <a href="#dataset">Dataset</a></li>
+              <li role="presentation"><a href="#code">Code</li>
               <li role="presentation"> <a href="#refs">Reference</a></li>
               <li><a href="./index.html#Contact">Contact</a></li>
             </ul>
@@ -33,7 +34,8 @@
           <div class="project-page">
           <a name="abstract"></a>
           <h2>Abstract</h2>
-          <p class="text-justify"> </p>
+          <p class="text-justify">Shouldn't language and vision features be treated equally in vision-language (VL) tasks? Many VL approaches treat the language component as an afterthought, using simple language models that are either built upon fixed word embeddings trained on text-only data or are learned from scratch. We believe that language features deserve more attention, and conduct experiments which compare different word embeddings, language models, and  embedding augmentation steps on five common VL tasks: image-sentence retrieval, image captioning, visual question answering, phrase grounding, and text-to-clip retrieval. 
+Our experiments provide some striking results; an average embedding language model outperforms an LSTM on retrieval-style tasks; state-of-the-art representations such as BERT perform relatively poorly on vision-language tasks. From this comprehensive set of experiments we  propose a set of best practices for incorporating the language component of VL tasks. To further elevate language features, we also show that knowledge in vision-language problems can be transferred across tasks to gain performance with multi-task training. This multi-task training is applied to a new Graph Oriented Vision-Language Embedding (GrOVLE), which we adapt from Word2Vec using WordNet and an original visual-language graph built from Visual Genome, providing a ready-to-use vision-language embedding: <a href="http://ai.bu.edu/grovle"> ai.bu.edu/grovle </a></p>
           <center>
           <a
           href="" target="_blank" class="btn btn-danger" role="button">PDF</a>
@@ -46,10 +48,20 @@
 	  <div class="project-page">
                 <a name="overview"></a>
                 <h2>Overview</h2>
+                <p> Here we give an overview of our findings. For more detailed analysis and experimental results, please refer to the paper. </p>
 		<br>
                 <center>
-                <img width="90%" alt="License" src="imgs/main.png"></img>
+                <img width="90%" alt="questions" src="questions.png"></img>
                 </center>	
+		<br>
+                <center>
+                <img width="90%" alt="Model variants" src="modelvariants.png"></img>
+                </center>	
+		<br>
+                <center>
+                <img width="90%" alt="Results summary" src="results.png"></img>
+                </center>	
+                <br>          
           </div>
 <br>                
 
@@ -57,8 +69,56 @@
               <a name="dataset"></a>
               <h2>Open Source Embeddings</h2>
               <p></p>
+              <a href="grovle_embedding.txt" target="_blank" class="btn btn-danger" role="button">GrOVLE</a>
+              <a href="mt_grovle_embedding.txt" target="_blank" class="btn btn-danger" role="button">Multi-task trained GrOVLE</a>
+              <a href="hglmm_300d.txt" target="_blank" class="btn btn-danger" role="button">HGLMM 300-D</a>
+              <a href="hglmm_6kd.txt" target="_blank" class="btn btn-danger" role="button">HGLMM 6K-D</a> 
           </div>
 
+          <div class="project-page">
+                <a name="code"></a>
+                <h2> Code </h2>
+                <p>Below are code bases used to perform the experiments we present in our paper. Both the QA R-CNN model for phrase
+                grounding and the TGN model for text-to-clip were internal implementations. QA R-CNN code will be released shortly and updated accordingly here.
+                </p>
+                <ul> 
+                   <li> Image-Sentence Retrieval
+                          <ul> 
+                             <li><a href="https://github.com/lwwang/Two_branch_network">Embedding Network</a></li>
+                             <li><a href="https://github.com/kuanghuei/SCAN">Stacked Cross Attention Network (SCAN)</a></li>
+                          </ul>
+                   </li>
+                   <li> Phrase Grounding
+                        <ul>
+                             <li><a href="https://github.com/BryanPlummer/cite">CITE Network</a></li>
+                             <li><a href="">Query Adaptive R-CNN *soon to come*</a></li>
+                          </ul>
+
+                   </li>
+                   <li> Text-to-Clip 
+                        <ul>
+                             <li><a href="https://github.com/BryanPlummer/cite">CITE Network</a></li>
+                             <!--<li><a href="">Temporal GroundNet (TGN)</a></li>-->
+                          </ul>
+
+                   </li>
+                   <li> Image Captioning 
+                        <ul>
+                             <li><a href="https://github.com/yunjey/pytorch-tutorial"> Show-and-Tell Neural Image Captioning (NIC)</a></li>
+                             <li><a href="https://github.com/chenxinpeng/ARNet"> AutoReconstructor Network (ARNet)</a></li>
+                             <li><a href="https://github.com/ruotianluo/self-critical.pytorch">Bottom-Up Top-Down (BUTD) Attention Model</a></li>
+                          </ul>
+
+                   </li>
+                   <li> Visual Question Answering 
+                       <ul>
+                             <li><a href="https://github.com/ronghanghu/n2nmn"> End-to-End Module Networks (EtEMN) </a></li>
+                             <li><a href="https://github.com/jnhwkim/ban-vqa"> Bilinear Attention Network (BAN) </a></li>
+                          </ul>
+
+                   </li>
+                </ul>
+          </div>
 
           <div class="project-page">
               <a name="refs"></a>
@@ -67,10 +127,10 @@
               <div class="highlight">
               <pre> <code> 
 
-                @article{Burns2019iccv, 
-                title={Language Features Matter: Effective Language Representations for Vision-Language Tasks},
+                @inproceedings{burns2019iccv, 
+                title={{L}anguage {F}eatures {M}atter: {E}ffective Language Representations for Vision-Language Tasks},
                 author={Andrea Burns and Reuben Tan and Kate Saenko and Stan Sclaroff and Bryan A. Plummer}, 
-                journal={ICCV}, 
+                booktitle={ICCV}, 
                 year={2019} 
                 }          
               </code> </pre>
@@ -89,5 +149,5 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!--<script src="js/bootstrap.min.js"></script>
     <script src="js/toggle.js"></script> -->
-  </body>
+  </body> 
 </html>
