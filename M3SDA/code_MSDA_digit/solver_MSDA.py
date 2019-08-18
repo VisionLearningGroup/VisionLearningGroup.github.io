@@ -135,7 +135,7 @@ class Solver(object):
 
             loss_s = (loss_s1 + loss_s2 + loss_s3 + 10*loss_s4)/4
 
-            loss_msda =  0.0005* msda.msda_regulizer(feat_s1, feat_s2, feat_s3, feat_s4, feat_t, 5)
+            loss_msda =  0.5* msda.msda_regulizer(feat_s1, feat_s2, feat_s3, feat_s4, feat_t, 5) / (self.batch_size * self.batch_size)
             loss = loss_msda + loss_s
             loss_s.backward()
 
