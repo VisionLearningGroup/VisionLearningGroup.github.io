@@ -17,9 +17,9 @@
             <ul class="nav navbar-nav">
       	      <li role="presentation"> <a href="#overview">Overview</a></li>
       	      <li role="presentation"> <a href="#dataset">Dataset</a></li>
-              <li role="presentation"><a href="#code">Code</li>
-              <li role="presentation"> <a href="#refs">Reference</a></li>
-              <!--<li><a href="./index.html#Contact">Contact</a></li>-->
+              <li role="presentation"> <a href="#code">Code</li>
+              <li role="presentation"> <a href="#refs">Reference</a> </li>
+              <li role="presentation"> <a href="#Contact">Contact</a></li>
             </ul>
           </div>
     </nav>
@@ -54,18 +54,13 @@ Our experiments provide some striking results; an average embedding language mod
 		<br>
                 
                 <img width="60%" alt="questions" src="questions.png"></img>
-                <p>How should language features be constructed for a vision-language task? We provide a side by side comparison of how word-level and sentence-level embeddings, simple and more complex language models, and fine-tuning and post-processing vectors impact performance.</p>
-                <img width="30%" alt="Model variants" src="modelvariants.png"></img>
-                <p>The language model variants used in our experiments include: mean pooling of embeddings (MP) which is then passed to fully connected layers (FC), a LSTM fed a single embedding at a time followed by a fully connected layer, or a self-attention model which builds a weighted context sum (WS) before being passed to a pair of fully connected layers.</p>
-               
+                <p>How should language features be constructed for a vision-language task? We provide a side by side comparison of how word-level and sentence-level embeddings, simple and more complex language models, and fine-tuning and post-processing vectors impact performance. The language model variants used in our experiments include: mean pooling of embeddings (MP) which is then passed to fully connected layers (FC), a LSTM fed a single embedding at a time followed by a fully connected layer, or a self-attention model which builds a weighted context sum (WS) before being passed to a pair of fully connected layers.</p>
+                <img width="40%" alt="Model variants" src="modelvariants.png"></img>
 	
 		<br>
                 <center>
                 <img width="90%" alt="Results summary" src="results.png"></img> </center>
                 <p>Average rank is defined using each tasks' best performing model. Variance is defined as the average difference between the best and worst performance of the fine-tuned language model options (e.g. Average Embedding + ft, Self-Attention + ft, LSTM + ft). Note that variance rank is listed from lowest to highest, e.g. from-scratch embeddings have highest variance. If the top embedding per task is a tie, both are provided in the right most column. For the tasks InferSent and BERT operate on, they would land between 7th and 8th place for average rank; average variance is N/A. Note that average variance is not provided for multi-task trained GrOVLE as it was created with the best model for each task.</p>
-                <br>
-                <br>
-                <br>          
           </div>
 <br>                
 
@@ -137,7 +132,7 @@ may exist within these files. If you need words outside of these files, you can 
                 @inproceedings{burns2019iccv, 
                 title={{L}anguage {F}eatures {M}atter: {E}ffective Language Representations for Vision-Language Tasks},
                 author={Andrea Burns and Reuben Tan and Kate Saenko and Stan Sclaroff and Bryan A. Plummer}, 
-                booktitle={In the IEEE Proceedings of the International Conference on Computer Vision (ICCV)}, 
+                booktitle={The IEEE Proceedings of the International Conference on Computer Vision (ICCV)}, 
                 year={2019} 
                 }          
               </code> </pre>
