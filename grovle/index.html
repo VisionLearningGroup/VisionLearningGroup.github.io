@@ -33,7 +33,7 @@
 
           <div class="project-page">
           <a name="abstract"></a>
-          <h2>Abstract</h2>
+          <center><h2>Abstract</h2></center>
           <p class="text-justify">Shouldn't language and vision features be treated equally in vision-language (VL) tasks? Many VL approaches treat the language component as an afterthought, using simple language models that are either built upon fixed word embeddings trained on text-only data or are learned from scratch. We believe that language features deserve more attention, and conduct experiments which compare different word embeddings, language models, and  embedding augmentation steps on five common VL tasks: image-sentence retrieval, image captioning, visual question answering, phrase grounding, and text-to-clip retrieval. 
 Our experiments provide some striking results; an average embedding language model outperforms an LSTM on retrieval-style tasks; state-of-the-art representations such as BERT perform relatively poorly on vision-language tasks. From this comprehensive set of experiments we  propose a set of best practices for incorporating the language component of VL tasks. To further elevate language features, we also show that knowledge in vision-language problems can be transferred across tasks to gain performance with multi-task training. This multi-task training is applied to a new Graph Oriented Vision-Language Embedding (GrOVLE), which we adapt from Word2Vec using WordNet and an original visual-language graph built from Visual Genome, providing a ready-to-use vision-language embedding: <a href="http://ai.bu.edu/grovle"> ai.bu.edu/grovle </a></p>
           <center>
@@ -47,19 +47,29 @@ Our experiments provide some striking results; an average embedding language mod
         
 	  <div class="project-page">
                 <a name="overview"></a>
-                <h2>Overview</h2>
+                <center><h2>Overview</h2></center>
                 <p> Here we give an overview of our findings. For more detailed analysis and experimental results, please refer to the paper. </p>
 		<br>
                 <center>
                 <img width="90%" alt="questions" src="questions.png"></img>
+                <p>How should language features be constructed for a vision-language task? We provide a side by side comparison of how word-level and sentence-level embeddings, simple and more complex language models, and fine-tuning and post-processing vectors impact performance.</p>
+                <br>
+                <br>
                 </center>	
 		<br>
                 <center>
-                <img width="90%" alt="Model variants" src="modelvariants.png"></img>
-                </center>	
+                <img width="60%" alt="Model variants" src="modelvariants.png"></img>
+                <p>The language model variants used in our experiments include: mean pooling of embeddings (MP) which is then passed to fully connected layers (FC), a LSTM fed a single embedding at a time followed by a fully connected layer, or a self-attention model which builds a weighted context sum (WS) before being passed to a pair of fully connected layers.</p>
+                <br>
+                <br>                
+                </center>
+	
 		<br>
                 <center>
                 <img width="90%" alt="Results summary" src="results.png"></img>
+                <p>Average rank is defined using each tasks' best performing model. Variance is defined as the average difference between the best and worst performance of the fine-tuned language model options (e.g. Average Embedding + ft, Self-Attention + ft, LSTM + ft). Note that variance rank is listed from lowest to highest, e.g. from-scratch embeddings have highest variance. If the top embedding per task is a tie, both are provided in the right most column. For the tasks InferSent and BERT operate on, they would land between 7th and 8th place for average rank; average variance is N/A. Note that average variance is not provided for multi-task trained GrOVLE as it was created with the best model for each task.</p>
+                <br>
+                <br>
                 </center>	
                 <br>          
           </div>
@@ -68,9 +78,13 @@ Our experiments provide some striking results; an average embedding language mod
           <div class="project-page">
               <a name="dataset"></a>
               <h2>Open Source Embeddings</h2>
-              <p></p>
-              <a href="grovle_embedding.txt" target="_blank" class="btn btn-danger" role="button">GrOVLE</a>
-              <a href="mt_grovle_embedding.txt" target="_blank" class="btn btn-danger" role="button">Multi-task trained GrOVLE</a>
+              <p>Here we provide four embedding variants: the single task trained GrOVLE (solely adapted using knowledge bases WordNet and our Visual Genome visual-language graph),
+the five task multi-task trained GrOVLE, and the PCA reduced HGLMM Fisher vectors (300-D, 6K-D).
+              </p>
+<p>The vectors are provided in text files, space separated. Each word vector is separated with a new line. Please note that not all vocabulary works for a given task 
+may exist within these files. If you need words outside of these files, you can initialize them with a zero vector or with random initialization before fine-tuning.</p>
+              <a href="grovle.txt" target="_blank" class="btn btn-danger" role="button">GrOVLE</a>
+              <a href="mt_grovle.txt" target="_blank" class="btn btn-danger" role="button">Multi-task trained GrOVLE</a>
               <a href="hglmm_300d.txt" target="_blank" class="btn btn-danger" role="button">HGLMM 300-D</a>
               <a href="hglmm_6kd.txt" target="_blank" class="btn btn-danger" role="button">HGLMM 6K-D</a> 
           </div>
