@@ -165,12 +165,17 @@ tr:nth-child(even) {
             <br>
             <br>
             <ul>
-            <li>We retain the <i>clipart</i> and <i>painting</i> subset as we are going to hold a domain adaptation challenge.
+            <!--><li>We retain the <i>clipart</i> and <i>painting</i> subset as we are going to hold a domain adaptation challenge.
                 These two domains will be used as the testing domain.
             </li>
                 <li>Train/Test images are structured in folders as {domain}/{cateogory}/{object_id}.jpg (or .png)</li>
-            </ul>
-
+            </ul><-->
+              <li>We release the training/testing images of <i>clipart</i> and <i>painting</i> subset now! </li>
+              <li>For <i>Infograph</i>, <i>Quickdraw</i>, <i>Real</i>, <i>Sketch</i> domains, the train/test images are structured in folders as {domain}/{cateogory}/{object_id}.jpg (or .png)</li>
+              <li>For <i>clipart</i> and <i>painting</i> domains, the train/test images are structured as {domain}/{train/test}/{trunk_ID}/{MD5}.jpg</li>
+              <li>To prepare for the submission, please output the predictions to a "result.txt" file, with one prediciton ranging from 0 to 344 per line (37706 lines for 37706 test samples). The order of the testing images is listed in 
+              <a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/submission_list.txt">submission_list.txt</a>. 
+              </li>
             <br>
         </div>
 
