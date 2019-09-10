@@ -136,27 +136,27 @@ tr:nth-child(even) {
                     <tbody>
                     <tr>
                         <td>Data</td>
-                        <td>clipart.zip</td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/clipart.zip">clipart.zip</a><b>(1.3G)</b></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/infograph.zip">infograph.zip</a><b>(4.0G)</b></td>
-                        <td>painting.zip</td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/painting.zip">painting.zip</a><b>(3.7G)</b></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/quickdraw.zip">quickdraw.zip</a><b>(439M)</b></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/real.zip">real.zip</a><b>(5.6G)</b></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/sketch.zip">sketch.zip</a><b>(2.5G)</b></td>
                     </tr>
                     <tr>
                         <td>Train</td>
-                        <td>clipart_train.txt</td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/clipart_train.txt">clipart_train.txt</a></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/infograph_train.txt">infograph_train.txt</a></td>
-                        <td>painting_train.txt</td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/painting_train.txt">painting_train.txt</a></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/quickdraw_train.txt">quickdraw_train.txt</a></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/real_train.txt">real_train.txt</a></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/sketch_train.txt">sketch_train.txt</a></td>
                     </tr>
                     <tr>
                         <td>Test</td>
-                        <td>clipart_test.txt</td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/clipart_test.txt">clipart_test.txt</a></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/infograph_test.txt">infograph_test.txt</a></td>
-                        <td>painting_test.txt</td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/painting_test.txt">painting_test.txt</a></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/quickdraw_test.txt">quickdraw_test.txt</a></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/real_test.txt">real_test.txt</a></td>
                         <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/sketch_test.txt">sketch_test.txt</a></td>
@@ -167,11 +167,13 @@ tr:nth-child(even) {
             <br>
             <br>
             <ul>
-            <li>We retain the <i>clipart</i> and <i>painting</i> subset as we are going to hold a domain adaptation challenge.
-                These two domains will be used as the testing domain.
-            </li>
-                <li>Train/Test images are structured in folders as {domain}/{cateogory}/{object_id}.jpg (or .png)</li>
-            </ul>
+         <li>We have released the training/testing images of <i>clipart</i> and <i>painting</i> subset now! </li>
+              <li>For <i>Infograph</i>, <i>Quickdraw</i>, <i>Real</i>, <i>Sketch</i> domains, the train/test images are structured in folders as {domain}/{cateogory}/{object_id}.jpg (or .png)</li>
+              <li>For <i>clipart</i> and <i>painting</i> domains, the train/test images are structured as {domain}/{train/test}/{trunk_ID}/{MD5}.jpg</li>
+              <li>To prepare for the <a href="https://competitions.codalab.org/competitions/20256">submission</a>, please output the predictions to a "result.txt" file, with one prediciton ranging from 0 to 344 per line (37706 lines for 37706 test samples). The order of the testing images is listed in 
+              <a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/submission_list.txt">submission_list.txt</a>. 
+              </li>
+              
 
             <br>
         </div>
