@@ -6,7 +6,7 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
-} 
+}
 
 td, th {
   border: 2px solid #dddddd;
@@ -21,7 +21,7 @@ tr:nth-child(even) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DomainNet</title>
+    <title>Moment Matching for Multi-Source Domain Adaptation</title>
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -58,9 +58,13 @@ tr:nth-child(even) {
 
     <div class="home-intro" style="padding: 5% 10%">
         <div class="row">
-            <h1 align="center">DomainNet Dataset</h1>
-           <h3 align="center">Moment Matching for Multi-Source Domain Adaptation</h3>
-             <h5 align="center">Published as an Oral Paper In ICCV 2019</h5>
+            <h1 align="center">Moment Matching for <br>Multi-Source Domain Adaptation</h1>
+            <div style="text-align:center">
+                Xingchao Peng, Qinxun Bai, Xide Xia, Zijun Huang, Kate Saenko, Bo Wang<br>
+                Our paper is accepted by ICCV 2019 as an <b>Oral</b> Presentation!
+            </div>
+
+
         </div>
 
         <div class="project-page">
@@ -114,9 +118,71 @@ tr:nth-child(even) {
             <br>
         </div>
 
+
         <div class="project-page">
             <a name="download"></a>
             <h2>Download</h2>
+            <br>
+
+            <div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Clipart</th>
+                        <th>Infograph</th>
+                        <th>Painting</th>
+                        <th>Quickdraw</th>
+                        <th>Real</th>
+                        <th>Sketch</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Data</td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/groundtruth/clipart.zip">clipart.zip</a><b>(1.3G)</b></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/infograph.zip">infograph.zip</a><b>(4.0G)</b></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/groundtruth/painting.zip">painting.zip</a><b>(3.7G)</b></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/quickdraw.zip">quickdraw.zip</a><b>(439M)</b></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/real.zip">real.zip</a><b>(5.6G)</b></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/sketch.zip">sketch.zip</a><b>(2.5G)</b></td>
+                    </tr>
+                    <tr>
+                        <td>Train</td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/groundtruth/txt/clipart_train.txt">clipart_train.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/infograph_train.txt">infograph_train.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/groundtruth/txt/painting_train.txt">painting_train.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/quickdraw_train.txt">quickdraw_train.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/real_train.txt">real_train.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/sketch_train.txt">sketch_train.txt</a></td>
+                    </tr>
+                    <tr>
+                        <td>Test</td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/groundtruth/txt/clipart_test.txt">clipart_test.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/infograph_test.txt">infograph_test.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/groundtruth/txt/painting_test.txt">painting_test.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/quickdraw_test.txt">quickdraw_test.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/real_test.txt">real_test.txt</a></td>
+                        <td><a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/sketch_test.txt">sketch_test.txt</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <br>
+            <!--<li>We retain the <i>clipart</i> and <i>painting</i> subset as we are going to hold a domain adaptation challenge.
+                These two domains will be used as the testing domain.
+            </li>
+                <li>Train/Test images are structured in folders as {domain}/{cateogory}/{object_id}.jpg (or .png)</li>
+            </ul>-->
+            <br>
+        </div>
+
+
+        <div class="project-page">
+            <a name="chellenge-download"></a>
+            <h2><a href="http://ai.bu.edu/visda-2019/">VisDA 2019</a> Challenge Download</h2>
             <br>
 
             <div>
@@ -167,14 +233,17 @@ tr:nth-child(even) {
             <br>
             <br>
             <ul>
-         <li>We have released the training/testing images of <i>clipart</i> and <i>painting</i> subset now! </li>
+            <!--<li>We retain the <i>clipart</i> and <i>painting</i> subset as we are going to hold a domain adaptation challenge.
+                These two domains will be used as the testing domain.
+            </li>
+                <li>Train/Test images are structured in folders as {domain}/{cateogory}/{object_id}.jpg (or .png)</li>
+            </ul>-->
+              <li>We have released the training/testing images of <i>clipart</i> and <i>painting</i> subset now! </li>
               <li>For <i>Infograph</i>, <i>Quickdraw</i>, <i>Real</i>, <i>Sketch</i> domains, the train/test images are structured in folders as {domain}/{cateogory}/{object_id}.jpg (or .png)</li>
               <li>For <i>clipart</i> and <i>painting</i> domains, the train/test images are structured as {domain}/{train/test}/{trunk_ID}/{MD5}.jpg</li>
-              <li>To prepare for the <a href="https://competitions.codalab.org/competitions/20256">submission</a>, please output the predictions to a "result.txt" file, with one prediciton ranging from 0 to 344 per line (37706 lines for 37706 test samples). The order of the testing images is listed in 
-              <a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/submission_list.txt">submission_list.txt</a>. 
+              <li>To prepare for the <a href="https://competitions.codalab.org/competitions/20256">submission</a>, please output the predictions to a "result.txt" file, with one prediciton ranging from 0 to 344 per line (37706 lines for 37706 test samples). The order of the testing images is listed in
+              <a href="http://csr.bu.edu/ftp/visda/2019/multi-source/txt/submission_list.txt">submission_list.txt</a>.
               </li>
-              
-
             <br>
         </div>
 
