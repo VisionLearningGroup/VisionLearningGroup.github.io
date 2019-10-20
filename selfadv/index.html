@@ -94,12 +94,19 @@ to the self-adversarial attack increases its generation quality and reconstructi
         <div class="project-page">
             <a name="overview"></a>
             <h2>Overview</h2>
-            <br>
-            <center>
-                <img width="90%" alt="License" src="imgs/overview.png"></img>
-            </center>
-            <br>
-        </div>
+            <p> Cycle-consistency property forces model to hide the information about the input image by adding low-amplitude 
+          structured noise to the translation. Ideally, if the reconstruction is "honest" and relies solely on the visual features 
+              of the input, the reconstruction quality should not be greater than that of the translation. The results of all three
+              translation methods (CycleGAN, UNIT and MUNIT) show that the reconstruction is almost perfect regardless of the
+              translation accuracy. Furthermore, the reconstruction of the input image is highly sensitive to low-amplitude random
+              noise added to the translation. We propose two defense techniques against the self-adversarial attack that 
+          make models both more "honest" in terms of reconstruction and thus increase the translation quality and less susceptible to 
+          random noise.</p>
+</center>		
+<br>
+                
+                <img width="65%" alt="embedding" src="self-embedding.png"></img><img width="35%" alt="Self-adversarial attack and defences" src="modelvariants.png"></img>
+ <br>
 
 
         <hr class="soften"></hr>
@@ -107,6 +114,9 @@ to the self-adversarial attack increases its generation quality and reconstructi
             <a name="code"></a>
             <h2>Code</h2>
             <p class="lead">
+              <p>
+                You can find the code of our project here:
+              </p>
                 </br>
                 <a href="https://github.com/dbash/pix2pix_cyclegan_guess_noise" target="_blank">[Code]
                 </br>
