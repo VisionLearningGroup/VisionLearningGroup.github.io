@@ -1,3 +1,144 @@
-<html>
-Test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 2px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PuppetGAN: Cross-Domain Image Manipulation by Demonstration</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
+    <!--link rel="icon" type="image/png" href="images/icons/favicon.ico"/-->
+    <!--link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"-->
+    <!--link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"-->
+    <!--link rel="stylesheet" type="text/css" href="vendor/animate/animate.css"-->
+    <!--link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css"-->
+    <!--link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css"-->
+    <!--link rel="stylesheet" type="text/css" href="css/util.css"-->
+    <!--link rel="stylesheet" type="text/css" href="css/main.css"-->
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"
+     style="background-color:#34a853;border-color:#34a853">
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li role="presentation"><a href="#overview">Overview</a></li>
+            <li role="presentation"><a href="#dataset">Dataset</a></li>
+            <li role="presentation"><a href="#code">Code</a></li>
+            <li role="presentation"><a href="#refs">Reference</a></li>
+            <!--<li><a href="./index.html#Contact">Contact</a></li>-->
+        </ul>
+        <!-- </div>--> <!--/.navbar-collapse -->
+
+    </div>
+</nav>
+
+
+<div class="container">
+
+    <div class="home-intro" style="padding: 5% 10%">
+        <div class="row">
+            <h1 align="center">PuppetGAN: Cross-Domain Image Manipulation by Demonstration</h1>
+            <div style="text-align:center">
+                Ben Usman, Nick Dufour, Kate Saenko, Chris Bregler<br>
+                ICCV'19
+            </div>
+
+
+        </div>
+
+        <div class="project-page">
+            <a name="abstract"></a>
+            <h2>Abstract</h2>
+            <p class="text-justify">
+In this work we propose a model that can manipulate individual visual attributes of objects in a real scene using examples 
+              of how respective attribute manipulations affect the output of a simulation. As an example, we train our 
+              model to manipulate the expression of a human face using nonphotorealistic 3D renders of a face with 
+              varied expression. Our model manages to preserve all other visual attributes of a real face, such as 
+              head orientation, even though this and other attributes are not labeled in either real or synthetic 
+              domain. Since our model learns to manipulate a specific property in isolation using only "synthetic 
+              demonstrations" of such manipulations without explicitly provided labels, it can be applied to shape, 
+              texture, lighting, and other properties that are difficult to measure or represent as real-valued 
+              vectors. We measure the degree to which our model preserves other attributes of a real image when a 
+              single specific attribute is manipulated. We use digit datasets to analyze how discrepancy in 
+              attribute distributions affects the performance of our model, and demonstrate results in a far 
+              more difficult setting: learning to manipulate real human faces using nonphotorealistic 3D renders.
+            </p>
+            <center>
+                <a
+                        href="http://ai.bu.edu/puppetgan/usman2019puppetgan.pdf" target="_blank" class="btn btn-danger"
+                        role="button">PDF</a>
+                <a
+                        href="http://ai.bu.edu/puppetgan/poster.pdf" target="_blank" class="btn btn-danger"
+                        role="button">Poster</a>
+
+          </center>
+        </div>
+
+        <hr class="soften"></hr>
+                
+                <img width="65%" alt="embedding" src="main.png"></img><img width="31%" alt="synaction" src="synaction_res.png"></img>
+ <br>
+        <hr class="soften"></hr>
+        <div class="project-page">
+            <a name="code"></a>
+            <h2>Code</h2>
+            <p class="lead">
+              <p>
+                To get the code and data, please write an email to <code>usmn[at]bu[dot]edu</code> indicating your university affiliation and a web homepage hosted on the university domain:
+              </p>
+            </p>
+        </div>
+
+
+        <hr class="soften"></hr>
+
+        <div class="project-page">
+
+            <a name="refs"></a>
+            <h2>Reference</h2>
+            <p class="lead">
+                If you find this useful in your work please consider citing:
+            <div class="highlight">
+          <pre> <code>
+@InProceedings{Usman_2019_ICCV,
+    author = {Usman, Ben and Dufour, Nick and Saenko, Kate and Bregler, Chris},
+    title = {PuppetGAN: Cross-Domain Image Manipulation by Demonstration},
+    booktitle = {The IEEE International Conference on Computer Vision (ICCV)},
+    month = {October},
+    year = {2019}
+}
+            </code> </pre>
+
+
+            </div>
+
+        </div>
+
+    </div> <!--container-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+</body>
 </html>
