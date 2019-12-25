@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 2px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adversarial Self-Defense for Cycle-Consistent GANs</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
+    <!--link rel="icon" type="image/png" href="images/icons/favicon.ico"/-->
+    <!--link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css"-->
+    <!--link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"-->
+    <!--link rel="stylesheet" type="text/css" href="vendor/animate/animate.css"-->
+    <!--link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css"-->
+    <!--link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css"-->
+    <!--link rel="stylesheet" type="text/css" href="css/util.css"-->
+    <!--link rel="stylesheet" type="text/css" href="css/main.css"-->
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"
+     style="background-color:#34a853;border-color:#34a853">
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li role="presentation"><a href="#overview">Overview</a></li>
+            <li role="presentation"><a href="#dataset">GTA Data</a></li>
+            <li role="presentation"><a href="http://ai.bu.edu/selfadv/neurips_2019_poster_dbash.pdf">Poster</a></li>
+            <li role="presentation"><a href="#code">Code</a></li>
+            <li role="presentation"><a href="#refs">Reference</a></li>
+            <!--<li><a href="./index.html#Contact">Contact</a></li>-->
+        </ul>
+        <!-- </div>--> <!--/.navbar-collapse -->
+
+    </div>
+</nav>
+
+
+<div class="container">
+
+    <div class="home-intro" style="padding: 5% 10%">
+        <div class="row">
+            <h1 align="center">Adversarial Self-Defense for Cycle-Consistent GANs</h1>
+            <div style="text-align:center">
+                Dina Bashkirova, Ben Usman and Kate Saenko<br>
+                NeurIPS'19
+            </div>
+
+
+        </div>
+
+        <div class="project-page">
+            <a name="abstract"></a>
+            <h2>Abstract</h2>
+            <p class="text-justify">
+The goal of unsupervised image-to-image translation is to  map images from one domain to another without the ground
+truth correspondence between the two domains. State-of-art methods  learn the correspondence using large numbers of 
+unpaired examples from both domains and are based on generative adversarial networks. In order to preserve the 
+semantics of the input image, the adversarial objective is usually combined with a cycle-consistency loss that 
+penalizes incorrect reconstruction of the input image from the translated one. However, if the target mapping is 
+many-to-one, e.g. aerial photos to maps, such a restriction forces the generator to hide information in low-amplitude
+structured noise that is undetectable by human eye or by the discriminator. In this paper, we show how such 
+self-attacking behavior of unsupervised translation methods affects their performance and provide two defense techniques
+. We perform a quantitative evaluation of the proposed techniques and show that making the translation model more robust
+to the self-adversarial attack increases its generation quality and reconstruction reliability and makes the model less sensitive to low-amplitude perturbations. 
+
+            </p>
+            <center>
+                <a
+                        href="https://arxiv.org/pdf/1908.01517.pdf" target="_blank" class="btn btn-danger"
+                        role="button">PDF</a>
+            </center>
+        </div>
+
+        <hr class="soften"></hr>
+
+
+        <div class="project-page">
+            <a name="overview"></a>
+            <h2>Overview</h2>
+            <p> Cycle-consistency property forces model to hide the information about the input image by adding low-amplitude 
+          structured noise to the translation. Ideally, if the reconstruction is "honest" and relies solely on the visual features 
+              of the input, the reconstruction quality should not be greater than that of the translation. The results of all three
+              translation methods (CycleGAN, UNIT and MUNIT) show that the reconstruction is almost perfect regardless of the
+              translation accuracy. Furthermore, the reconstruction of the input image is highly sensitive to low-amplitude random
+              noise added to the translation. We propose two defense techniques against the self-adversarial attack that 
+          make models both more "honest" in terms of reconstruction and less susceptible to 
+          random noise.</p>
+</center>		
+<br>
+                
+                <img width="65%" alt="embedding" src="self-embedding.png"></img><img width="31%" alt="synaction" src="synaction_res.png"></img>
+ <br>
+
+
+        <hr class="soften"></hr>
+        <div class="project-page">
+            <a name="code"></a>
+            <h2>Code</h2>
+            <p class="lead">
+              <p>
+                You can find the code of our project here:
+              </p>
+                </br>
+                <a href="https://github.com/dbash/pix2pix_cyclegan_guess_noise" target="_blank">[Code]
+                </br>
+            </p>
+        </div>
+
+
+        <hr class="soften"></hr>
+
+        <div class="project-page">
+
+            <a name="refs"></a>
+            <h2>Reference</h2>
+            <p class="lead">
+                If you find this useful in your work please consider citing:
+            <div class="highlight">
+          <pre> <code>
+@article{bashkirova2019adversarial,
+        title={Adversarial Self-Defense for Cycle-Consistent GANs},
+        author={Bashkirova, Dina and Usman, Ben and Saenko, Kate},
+        journal={arXiv preprint arXiv:1908.01517},
+        year={2019}
+        }
+            </code> </pre>
+
+
+            </div>
+
+        </div>
+
+    </div> <!--container-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+</body>
+</html>
