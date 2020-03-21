@@ -1,0 +1,24 @@
+
+title: 'VisDA2020: Visual Domain Adaptation Challenge'
+url: 'http://ai.bu.edu'
+#baseurl: '/visda-2019' #change it according to your repository name
+baseurl: '/visda-2020' #change it according to your repository name
+
+# Enable one of these styles by removing #. Style will be applied only after restarting the build or serve.
+#style: styles-2
+# style: styles-3
+# style: styles-4
+# style: styles-5
+style: styles-7
+# style: styles-purple  
+
+
+#Profile information
+name: Domain Adaptation
+tagline: ECCV2020 Workshop Challenge
+# pic: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+
+
+# Tracker
+# analytics: UA-83979019-1
+# Update all the sections by editing the files inside _includes folder.

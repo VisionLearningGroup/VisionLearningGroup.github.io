@@ -1,0 +1,106 @@
+<!-- Use icons from fontawesome when you are adding new item in the contact list  -->             
+                
+     <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile-img" src="{{site.baseurl}}/assets/images/{% if site.pic %}{{ site.pic }}{% else %}profile.png{% endif %}" alt="profile picture" />
+                <h1 class="name">{{site.name}}</h1>
+                <h3 class="tagline">{{site.tagline}}</h3>
+            </div><!--//profile-container-->
+
+            <div class="education-container container-block" id="dates">
+                <h2 class="container-block-title">Important Dates</h2>
+
+                <div class="item">
+                    <h4 class="degree">Registration starts</h4>
+                    <h5 class="meta">April 1th</h5>
+                </div>
+              
+              <div class="item">
+                    <h4 class="degree">Training/validation data released</h4>
+                    <h5 class="meta">May 1th</h5>
+              </div>
+              <div class="item">
+                    <h5 class="degree">Test datasets released</h5>
+                    <h5 class="meta">Jun 25st</h5>
+              </div>
+                            
+              <div class="item">
+                    <h4 class="degree">Final submission</h4>
+                    <h5 class="meta">July 25th, 11:59 am EST/ July 25th, 3:59 pm UTC</h5>
+              </div>
+              
+            </div>
+       
+            <div class="education-container container-block" style="background: rgba(0, 0, 50, 0.3);" id='reg'>
+                
+                <h2 class="container-block-title">Registration</h2>
+                <form method="POST" action="https://formspree.io/weijian.deng@anu.edu.au">
+                  <div class="form-group">
+                    <label>Team Name</label>
+                    <input type="text" class="form-control" name="name" placeholder="Team Name" />
+                  </div>
+                  <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email" />
+                  </div>
+                  <div class="form-group">
+                    <label>Affiliation</label>
+                    <input type="text" class="form-control" name="aff" placeholder="Affiliation" />
+                  </div>
+                  <div class="form-group">
+                    <label>Tentative Track</label>
+                    <select class="form-control" name="track">
+                      <option>Both</option>
+                      <option>Domain Adaptive Pedestrian Re-identification</option>
+                      <option>Domain Adaptive Vehicle Re-identification</option>
+                    </select>
+                  </div>
+                  <input type="hidden" name="_format" value="plain" />
+                  <input type="text" name="_gotcha" style="display:none" />
+                  <input type="hidden" name="_next" value="https://groups.google.com/forum/#!forum/visda-2020-participants" />
+                  <button type="submit" class="btn btn-default">Submit</button>
+
+                </form>
+
+            </div>
+           
+            
+            <div class="education-container container-block">
+                
+                <h2 class="container-block-title">Quick Links</h2>
+              
+                <div class="item">
+<!--                    <h4 class="degree"><a href = "https://github.com/VisionLearningGroup/visda-2019-public">Github Repository</a></h4>-->
+                    <h5 class = "meta">Datasets and Starting Code (TBD)</h5>
+                </div>
+              
+                <div class="item">
+                    <h4 class="degree"><a href = "#evaluation">CodaLab</a></h4>
+                    <h5 class = "meta">Evaluation Server</h5>
+                </div>  
+              
+              <div class="item">
+                <h4 class="degree"><a href = "https://groups.google.com/forum/#!forum/visda-2020-participants">Mailing List</a></h4>
+                <h5 class="meta">Join for Email Updates </h5>
+              </div>
+              
+              <div class="item">
+                <h4 class="degree"><a href = "http://ai.bu.edu/visda-2019/">VisDA 2019</a></h4>
+                <h4 class="degree"><a href = "http://ai.bu.edu/visda-2018/">VisDA 2018</a></h4>
+                <h4 class="degree"><a href = "http://ai.bu.edu/visda-2017/">VisDA 2017</a></h4>
+              </div>
+               
+            </div>
+
+            <div class="profile-container">
+
+                <h2 class="container-block-title">Contact the Organizers</h2>
+                <ul class="list-unstyled contact-list">
+
+                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto: visda-organizers@googlegroups.com">visda-organizers@googlegroups.com</a></li>
+
+                </ul>
+            </div><!--//contact-container-->
+        
+            
+        </div><!--//sidebar-wrapper-->
