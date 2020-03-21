@@ -2,7 +2,7 @@
 title: 'VisDA2020: Visual Domain Adaptation Challenge'
 url: 'http://ai.bu.edu'
 #baseurl: '/visda-2019' #change it according to your repository name
-baseurl: '/visda-2020' #change it according to your repository name
+baseurl: '/VisionLearningGroup.github.io/visda-2020' #change it according to your repository name
 
 # Enable one of these styles by removing #. Style will be applied only after restarting the build or serve.
 #style: styles-2
