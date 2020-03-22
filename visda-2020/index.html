@@ -7,194 +7,187 @@ layout: visda2020
 <section style="text-align: justify">
 	<h1> Visual Domain Adaptation Challenge </h1>
 	<h2> (VisDA-2020) </h2>
-</br>
+	</br>
 
-[<a href = "#news">News</a>]
-[<a href = "#overview">Overview</a>]
-<!--[<a href = "https://github.com/VisionLearningGroup/visda-2019-public">Data and Code</a>]-->
-[<a href= "#prizes">Prizes</a>]
-[<a href = "#evaluation">Evaluation</a>]
-[<a href = "#rules">Rules</a>]
-[<a href = "#faq">FAQ</a>]
-[<a href = "https://sites.google.com/view/task-cv2020">TASK-CV Workshop</a>]
-[<a href = "#organizers">Organizers</a>]
-<!--[<a href = "#sponsors">Sponsors</a>]-->
-</br> </br> </nr>
+	[<a href = "#news">News</a>]
+	[<a href = "#overview">Overview</a>]
+	<!--[<a href = "https://github.com/VisionLearningGroup/visda-2019-public">Data and Code</a>]-->
+	<!--	[<a href= "#prizes">Prizes</a>]-->
+	[<a href = "#evaluation">Evaluation</a>]
+	[<a href = "#rules">Rules</a>]
+	[<a href = "#faq">FAQ</a>]
+	[<a href = "https://sites.google.com/view/task-cv2020">TASK-CV Workshop</a>]
+	[<a href = "#organizers">Organizers</a>]
+	<!--[<a href = "#sponsors">Sponsors</a>]-->
+	</br> </br> </nr>
 
-<a name = "news"></a>
-<h2 class="section-title"> News </h2>
+	<a name = "news"></a>
+	<h2 class="section-title"> News </h2>
 
-<p>Introducing the 2020 VisDA Challenge!
-	This year we focus on domain adaptive instance retrieval, where the source and target domains have completely different classes (instance IDs).
-	The particular task is to retrieve the vehicle/pedestrian instances of the same ID as the query image.
-	This problem is significantly different from previous VisDA challenges, where the source and target domains have at least some identical classes.
-	Moreover, ID matching depends on fine-grained details, making the problem harder than before.
-	For details about last year's challenges and winning methods,
-	see VisDA <a href = "http://ai.bu.edu/visda-2017/">[2017]</a> <a href = "http://ai.bu.edu/visda-2018/">[2018]</a> <a href = "http://ai.bu.edu/visda-2019/">[2019]</a> pages.</p>
+	<p>Introducing the 2020 VisDA Challenge!
+		This year we focus on domain adaptive instance retrieval, where the source and target domains have completely different classes (instance IDs).
+		The particular task is to retrieve the pedestrian instances of the same ID as the query image.
+		This problem is significantly different from previous VisDA challenges, where the source and target domains have at least some identical classes.
+		Moreover, ID matching depends on fine-grained details, making the problem harder than before.
+		For details about last year's challenges and winning methods,
+		see VisDA <a href = "http://ai.bu.edu/visda-2017/">[2017]</a> <a href = "http://ai.bu.edu/visda-2018/">[2018]</a> <a href = "http://ai.bu.edu/visda-2019/">[2019]</a> pages.</p>
 
-<p><b>Important Announcement:</b> Consistent with <a href = "http://ai.bu.edu/visda-2019/">[VisDA 2019]</a> challenge, this year's challenge winners will be <b>required</b> to release a four-page technical report <b>and</b> code to replicate their results.
-	See the corresponding <a href="#faq">rules</a> section for details. </p>
+	<p><b>Important Announcement:</b> Consistent with <a href = "http://ai.bu.edu/visda-2019/">[VisDA 2019]</a> challenge, this year's challenge winners will be <b>required</b> to release a four-page technical report <b>and</b> code to replicate their results.
+		See the corresponding <a href="#faq">rules</a> section for details. </p>
 
-<ul>
-	<li><b> March 15</b> Registration will start at April 1th</li>
-</ul>
+	<ul>
+		<li><b> March 15</b> Registration will start at April 1th</li>
+	</ul>
 
-</br>
-
-
-
-
-<a name = "overview"></a>
-<h2 class="section-title"> Overview </h2>
-<div class="summary">
-<p> We are pleased to announce the 2020 Visual Domain Adaptation (VisDA2019) Challenge!
-	It is well known that the success of machine learning methods on visual recognition tasks is highly dependent on access to large labeled datasets.
-	Unfortunately, performance often drops significantly when the model is presented with data from a new deployment domain which it did not see in training,
-	a problem known as <i>dataset shift</i>.
-	The VisDA challenge aims to test domain adaptation methods’ ability to transfer source knowledge and adapt it to novel target domains. </p>
-</br>
+	</br>
 
 
 
-<p> The competition will take place during the months of May -- July 2020, and the top performing teams will be invited to present their results at the workshop at <a href="https://sites.google.com/view/task-cv2020">ECCV 2020</a> in Sec, Glasgow.
-	This year’s challenge includes two tracks: </p>
 
-  <ul>
-	  <li>Domain Adaptive Pedestrian Re-identification;</li>
-	  <li>Domain Adaptive Vehicle Re-identification.</li>
-  </ul>
-
-<p> Participants are welcome to enter in one or both tracks. </p>
-</br>
-
-<!--<figure>-->
-<!--<img class="img-responsive" style="dipslay:block;margin-left:auto;margin-right:auto" src="http://ai.bu.edu/M3SDA/imgs/data_examples.png"/>-->
-<!--<img class="img-responsive" style="dipslay:block;margin-left:auto;margin-right:auto" src="http://ai.bu.edu/M3SDA/imgs/statistics.png"/>-->
-<!--</figure>-->
-<!--</br>-->
-
-<!--<a name = "sponsors"></a>-->
-<!--<h2 class="section-title"> Sponsors </h2>-->
-
-<!--<img src="https://community.anitab.org/wp-content/uploads/2018/12/ANU-LOGO-NEW.jpg"  height="100">-->
-<!--&nbsp;&nbsp;&nbsp;-->
-<!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Boston_University_wordmark.svg/1280px-Boston_University_wordmark.svg.png"  height="100">-->
-<!--</br>-->
-<!--</br>-->
-
-<!--<a name = "prizes"></a>-->
-<!--<h2 class="section-title"> Prizes </h2>-->
-
-<!--<p> The top three teams in each track will receive prizes:</p>-->
-
-<!--<ul>-->
-<!--  <li>1st place: TBD </li>-->
-<!--  <li>2nd place: TBD </li>-->
-<!--  <li>3rd place: TBD </li>-->
-<!--</ul>-->
-
-<!--</br>-->
-
-<a name = "evaluation"></a>
-<h2 class="section-title"> Evaluation </h2>
-
-<p> We will use CodaLab to evaluate submissions and maintain a leaderboard.
-	To register for the evaluation server, please create an account on <a href = "https://competitions.codalab.org/">CodaLab</a>
-	and enter as a participant in one of the following competitions: </p>
-
-<ul>
-  <li><a href = "https://competitions.codalab.org/competitions/23833">Domain Adaptive Pedestrian Re-identification</a></li>
-  <li><a href = "https://competitions.codalab.org/competitions/23840">Domain Adaptive Vehicle Re-identification</a></li>
-</ul>
-
-<p>If you are working as a team, you have the option to register for one account for your team or register multiple accounts under the same team name.
-	If you choose to use one account, please indicate the names of all of the members on your team.
-	This can be modified in the “User Settings” tab.
-	If your team registers for multiple accounts,
-	please do so using the protocol explained by CodaLab <a href = "https://github.com/codalab/codalab-competitions/wiki/User_Teams">here</a>.
-	Regardless of whether you register for one or multiple accounts,
-	your team must adhere to the per-team submission limits (20 entries per day per team during the validation phase). </p>
-
-<!--<p>Please refer to the instructions in the <a href = "https://github.com/VisionLearningGroup/visda-2019-public">DevKit</a> ReadMe file for specific details on submission formatting and evaluation for the classification and segmentation challenges.</p>-->
-
-</br>
-
-<a name = "rules"></a>
-<h2 class="section-title"> Rules </h2>
-
-<p>The VisDA challenge tests adaptation and model transfer, so the rules are different than most challenges. Please read them carefully.</p>
-
-<p><b>Supervised Training:</b> Teams may only submit test results of models trained on the source domain data. To ensure equal comparison, we also do not allow any other external training data, modifying the provided training dataset, or any form of manual data labeling. </p>
-
-<p><b>Unsupervised training:</b> Models can be adapted (trained) on the test data in an unsupervised way, i.e. without labels.  </p>
-
-<p><b>Source Models:</b> The performance of a domain adaptation algorithm greatly depends on the baseline performance of the model trained only on source data. We ask that teams submit two sets of results: 1) predictions obtained only with the source-trained model, and 2) predictions obtained with the adapted model. See the development kit for submission formatting details. </p>
-
-<p><b>Leaderboard:</b>The main leaderboard for each competition track will show results of adapted models and will be used to determine the final team ranks. The expanded leaderboard will additionally show the team's source-only models, i.e. those trained only on the source domain without any adaptation. These results are useful for estimating how much the method improves upon its source-only model, but will not be used to determine team ranks. </p>
-	<p><b>Rank:</b>The final rank will be determined by the overall accuracy on <i>clipart</i> and <i>painting</i> domain. You can train two separate models for <i>clipart</i> and <i>painting</i>.</p>
+	<a name = "overview"></a>
+	<h2 class="section-title"> Overview </h2>
+	<div class="summary">
+		<p> We are pleased to announce the 2020 Visual Domain Adaptation (VisDA2020) Challenge!
+			It is well known that the success of machine learning methods on visual recognition tasks is highly dependent on access to large labeled datasets.
+			Unfortunately, performance often drops significantly when the model is presented with data from a new deployment domain which it did not see in training,
+			a problem known as <i>dataset shift</i>.
+			The VisDA challenge aims to test domain adaptation methods’ ability to transfer source knowledge and adapt it to novel target domains. </p>
+		</br>
 
 
-</br>
 
-<a name = "faq"></a>
-<h2 class="section-title"> FAQ </h2>
+		<p> The competition will take place during the months of May -- July 2020, and the top performing teams will be invited to present their results at the workshop at <a href="https://sites.google.com/view/task-cv2020">ECCV 2020</a> in Sec, Glasgow.
+			This year’s challenge focuses on <b>Domain Adaptive Pedestrian Re-identification</b>.</p>
 
-<ol>
-<li><b>Can we train models on data other than the source domain?</b></li>
-<p> Participants may elect to pre-train their models only on ImageNet.
-<!--	Please refer to the challenge evaluation instructions found in the <a href = "https://github.com/VisionLearningGroup/visda-2019-public">DevKit</a> for more details. </p>-->
+		</br>
 
-<li><b>In unsupervised multi-source domain adaptation challenge, can we use testing split of the given data to tune the parameter?</b></li>
-<p>No, in the training phase, only the training split can be used to train the model. In other words, utilizing the testing split from the source domains or target domain is prohibited. </p>
+		<!--<figure>-->
+		<!--<img class="img-responsive" style="dipslay:block;margin-left:auto;margin-right:auto" src="http://ai.bu.edu/M3SDA/imgs/data_examples.png"/>-->
+		<!--<img class="img-responsive" style="dipslay:block;margin-left:auto;margin-right:auto" src="http://ai.bu.edu/M3SDA/imgs/statistics.png"/>-->
+		<!--</figure>-->
+		<!--</br>-->
 
-<li><b>Can we assign pseudo labels to the unlabeled data in the target domain?</b></li>
-<p>Yes, assigning pseudo labels is allowed as long as no human labeling is involved. </p>
+		<!--<a name = "sponsors"></a>-->
+		<!--<h2 class="section-title"> Sponsors </h2>-->
 
-<li><b>Do we have to use the provided baseline models?</b></li>
-<p>No, these are provided for your convenience and are optional. </p>
+		<!--<img src="https://community.anitab.org/wp-content/uploads/2018/12/ANU-LOGO-NEW.jpg"  height="100">-->
+		<!--&nbsp;&nbsp;&nbsp;-->
+		<!--<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Boston_University_wordmark.svg/1280px-Boston_University_wordmark.svg.png"  height="100">-->
+		<!--</br>-->
+		<!--</br>-->
 
-<li><b>How many submissions can each team submit per competition track?</b></li>
-<p>For the validation domain, the number of submissions per team is limited to 20 upload per day and there are no restrictions on total number of submissions. For the test domain, the number of submissions per team is limited to 1 upload per day and 20 uploads in total. Only one account per team must be used to submit results. Do not create multiple accounts for a single project to circumvent this limit, as this will result in disqualification. </p>
+		<!--<a name = "prizes"></a>-->
+		<!--<h2 class="section-title"> Prizes </h2>-->
 
-<li><b>Can multiple teams enter from the same research group?</b></li>
-<p>Yes, so long as each team is comprised of different members.</p>
+		<!--<p> The top three teams in each track will receive prizes:</p>-->
 
-<li><b>Can external data be used?</b></li>
-	<p> The source domain is a synthetic dataset simulated from <a href="https://github.com/sxzrt/Dissecting-Person-Re-ID-from-the-Viewpoint-of-Viewpoint">Person X</a>.
-	Optional initialization of models with weights pre-trained on ImageNet is allowed and must be declared in the submission.
-	Please see the <a href = "#rules">challenge rules</a> for more details. </p>
+		<!--<ul>-->
+		<!--  <li>1st place: TBD </li>-->
+		<!--  <li>2nd place: TBD </li>-->
+		<!--  <li>3rd place: TBD </li>-->
+		<!--</ul>-->
 
-<li><b>Are challenge participants required to reveal all details of their methods?</b></li>
-<p><b> Yes! </b> The top performing teams are required to include a four+ page write-up regarding their methods and code to reproduce their results to the claim the victory. The detailed procedure for releasing the code is to be determined. </p>
+		<!--</br>-->
 
-<li><b>Do participants need to adhere to TASK-CV abstract submission deadlines to participate in the challenge?</b></li>
-<p>Submission of a <a href = "https://sites.google.com/view/task-cv2020">TASK-CV</a> workshop abstract is not mandatory to participate in the challenge;
-	however, we request that any teams that wish to be considered for prizes or receive invitation to speak at the workshop submit a 4-page abstract.
-	The top-performing teams that submit abstracts will be invited to present their approaches at the workshop. </p>
-</ol>
+		<a name = "evaluation"></a>
+		<h2 class="section-title"> Evaluation </h2>
 
-</br>
-</br>
+		<p> We will use CodaLab to evaluate submissions and maintain a leaderboard.
+			To register for the evaluation server, please create an account on <a href = "https://competitions.codalab.org/">CodaLab</a>
+			and enter as a participant in the following competition: </p>
 
-<a name = "organizers"></a>
-<h2 class="section-title"> Organizers </h2>
+		<ul>
+			<li><a href = "https://competitions.codalab.org/competitions/23833">Domain Adaptive Pedestrian Re-identification</a></li>
+		</ul>
 
-Kate Saenko (Boston University),
-Liang Zheng (Australian National University)
-Xingchao Peng (Boston University),
-Weijian Deng (Australian National University)
+		<p>If you are working as a team, you have the option to register for one account for your team or register multiple accounts under the same team name.
+			If you choose to use one account, please indicate the names of all of the members on your team.
+			This can be modified in the “User Settings” tab.
+			If your team registers for multiple accounts,
+			please do so using the protocol explained by CodaLab <a href = "https://github.com/codalab/codalab-competitions/wiki/User_Teams">here</a>.
+			Regardless of whether you register for one or multiple accounts,
+			your team must adhere to the per-team submission limits (20 entries per day per team during the validation phase). </p>
 
-</br>
-</br>
+		<!--<p>Please refer to the instructions in the <a href = "https://github.com/VisionLearningGroup/visda-2019-public">DevKit</a> ReadMe file for specific details on submission formatting and evaluation for the classification and segmentation challenges.</p>-->
 
-<!--<a name = "acknowledgement"></a>-->
-<!--<h2 class="section-title"> Acknowledgement </h2>-->
+		</br>
 
-<!--We thank XX.-->
-</br>
+		<a name = "rules"></a>
+		<h2 class="section-title"> Rules </h2>
+
+		<p>The VisDA challenge tests adaptation and model transfer, so the rules are different than most challenges. Please read them carefully.</p>
+
+		<p><b>Supervised Training:</b> Teams may only submit test results of models trained on the source domain data. To ensure equal comparison, we also do not allow any other external training data, modifying the provided training dataset, or any form of manual data labeling. </p>
+
+		<p><b>Unsupervised training:</b> Models can be adapted (trained) on the test data in an unsupervised way, i.e. without labels.  </p>
+
+		<p><b>Source Models:</b> The performance of a domain adaptation algorithm greatly depends on the baseline performance of the model trained only on source data. We ask that teams submit two sets of results: 1) predictions obtained only with the source-trained model, and 2) predictions obtained with the adapted model. See the development kit for submission formatting details. </p>
+
+		<p><b>Leaderboard:</b>The main leaderboard for each competition track will show results of adapted models and will be used to determine the final team ranks. The expanded leaderboard will additionally show the team's source-only models, i.e. those trained only on the source domain without any adaptation. These results are useful for estimating how much the method improves upon its source-only model, but will not be used to determine team ranks. </p>
+		<p><b>Rank:</b>The final rank will be determined by the overall accuracy on <i>clipart</i> and <i>painting</i> domain. You can train two separate models for <i>clipart</i> and <i>painting</i>.</p>
 
 
-<div height=1000px> </div>
+		</br>
 
-</div><!--//summary-->
+		<a name = "faq"></a>
+		<h2 class="section-title"> FAQ </h2>
+
+		<ol>
+			<li><b>Can we train models on data other than the source domain?</b></li>
+			<p> Participants may elect to pre-train their models only on ImageNet.
+				<!--	Please refer to the challenge evaluation instructions found in the <a href = "https://github.com/VisionLearningGroup/visda-2019-public">DevKit</a> for more details. </p>-->
+
+			<li><b>In unsupervised multi-source domain adaptation challenge, can we use testing split of the given data to tune the parameter?</b></li>
+			<p>No, in the training phase, only the training split can be used to train the model. In other words, utilizing the testing split from the source domains or target domain is prohibited. </p>
+
+			<li><b>Can we assign pseudo labels to the unlabeled data in the target domain?</b></li>
+			<p>Yes, assigning pseudo labels is allowed as long as no human labeling is involved. </p>
+
+			<li><b>Do we have to use the provided baseline models?</b></li>
+			<p>No, these are provided for your convenience and are optional. </p>
+
+			<li><b>How many submissions can each team submit per competition track?</b></li>
+			<p>For the validation domain, the number of submissions per team is limited to 20 upload per day and there are no restrictions on total number of submissions. For the test domain, the number of submissions per team is limited to 1 upload per day and 20 uploads in total. Only one account per team must be used to submit results. Do not create multiple accounts for a single project to circumvent this limit, as this will result in disqualification. </p>
+
+			<li><b>Can multiple teams enter from the same research group?</b></li>
+			<p>Yes, so long as each team is comprised of different members.</p>
+
+			<li><b>Can external data be used?</b></li>
+			<p> The source domain is a synthetic dataset simulated from <a href="https://github.com/sxzrt/Dissecting-Person-Re-ID-from-the-Viewpoint-of-Viewpoint">Person X</a>.
+				Optional initialization of models with weights pre-trained on ImageNet is allowed and must be declared in the submission.
+				Please see the <a href = "#rules">challenge rules</a> for more details. </p>
+
+			<li><b>Are challenge participants required to reveal all details of their methods?</b></li>
+			<p><b> Yes! </b> The top performing teams are required to include a four+ page write-up regarding their methods and code to reproduce their results to the claim the victory. The detailed procedure for releasing the code is to be determined. </p>
+
+			<li><b>Do participants need to adhere to TASK-CV abstract submission deadlines to participate in the challenge?</b></li>
+			<p>Submission of a <a href = "https://sites.google.com/view/task-cv2020">TASK-CV</a> workshop abstract is not mandatory to participate in the challenge;
+				however, we request that any teams that wish to be considered for prizes or receive invitation to speak at the workshop submit a 4-page abstract.
+				The top-performing teams that submit abstracts will be invited to present their approaches at the workshop. </p>
+		</ol>
+
+		</br>
+		</br>
+
+		<a name = "organizers"></a>
+		<h2 class="section-title"> Organizers </h2>
+
+		Kate Saenko (Boston University),
+		Liang Zheng (Australian National University),
+		Xingchao Peng (Boston University),
+		Weijian Deng (Australian National University)
+
+		</br>
+		</br>
+
+		<!--<a name = "acknowledgement"></a>-->
+		<!--<h2 class="section-title"> Acknowledgement </h2>-->
+
+		<!--We thank XX.-->
+		</br>
+
+
+		<div height=1000px> </div>
+
+	</div><!--//summary-->
 </section><!--//section-->
