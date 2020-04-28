@@ -127,8 +127,14 @@ layout: visda2020
 		<p><b>Source Models:</b> The performance of a domain adaptation algorithm greatly depends on the baseline performance of the model trained only on source data. We ask that teams submit two sets of results: 1) predictions obtained only with the source-trained model, and 2) predictions obtained with the adapted model. See the development kit for submission formatting details. </p>
 
 		<p><b>Leaderboard:</b>The main leaderboard for each competition track will show results of adapted models and will be used to determine the final team ranks. The expanded leaderboard will additionally show the team's source-only models, i.e. those trained only on the source domain without any adaptation. These results are useful for estimating how much the method improves upon its source-only model, but will not be used to determine team ranks. </p>
-		<p><b>Rank:</b>The final rank will be determined by the overall accuracy on <i>clipart</i> and <i>painting</i> domain. You can train two separate models for <i>clipart</i> and <i>painting</i>.</p>
 
+		<p><b>Rank:</b> The final rank will be determined by the overall accuracy on the target test set.
+		The evaluation metrics used to rank the performance of each team will be mean Average Precision (mAP) and Cumulated Matching Characteristics (CMC) curve.</p>
+
+		<p><b>Additional Datasets:</b>
+		Teams that wish to be listed in the leaderboard and win the challenge awards are  <i>NOT</i> allowed to use any external data for either training or validation.
+		The winning teams are required to submit their training and testing codes for verification after the challenge submission deadline
+			in order to ensure that no external data was used for training.</p>
 
 		</br>
 
@@ -140,8 +146,9 @@ layout: visda2020
 			<p> Participants may elect to pre-train their models only on ImageNet.
 				<!--	Please refer to the challenge evaluation instructions found in the <a href = "https://github.com/VisionLearningGroup/visda-2019-public">DevKit</a> for more details. </p>-->
 
-			<li><b>In unsupervised multi-source domain adaptation challenge, can we use testing split of the given data to tune the parameter?</b></li>
-			<p>No, in the training phase, only the training split can be used to train the model. In other words, utilizing the testing split from the source domains or target domain is prohibited. </p>
+			<li><b>In unsupervised pedestrian re-identification domain adaptation challenge, can we use testing split of the given data to tune the parameter?</b></li>
+			<p>No, in the training phase, only the training split can be used to train the model.
+				In other words, utilizing the testing split from the source domains or target domain is prohibited. </p>
 
 			<li><b>Can we assign pseudo labels to the unlabeled data in the target domain?</b></li>
 			<p>Yes, assigning pseudo labels is allowed as long as no human labeling is involved. </p>
