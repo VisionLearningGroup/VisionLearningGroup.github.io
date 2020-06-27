@@ -151,7 +151,23 @@ layout: visda2020
 				In other words, utilizing the testing split from the source domains or target domain is prohibited. </p>
 
 			<li><b>Can we assign pseudo labels to the unlabeled data in the target domain?</b></li>
-			<p>Yes, assigning pseudo labels is allowed as long as no human labeling is involved. </p>
+			<p>Assigning pseudo labels for the targte training set is allowed as long as no human labeling is involved. Please DO NOT
+			assign pseudo labels for the test set or validation.</p>
+
+			<li><b>Can we use personX_spgan in the challenge??</b></li>
+			<p>Yes. SPGAN is an unsupervised image-level alignment method, please feel free to use it. </p>
+
+			<li><b>Can we use target_validation or target_test for training without using their labels?</b></li>
+			<p>No. Don't use target validation/test_set for training. only Target training set can be used for training.</p>
+
+			<li><b>Can we use target_validation or target_test for re-ranking?</b></li>
+			<p>Yes. Re-ranking is a post-processing technique.</p>
+
+			<li><b>Can we use camera index of target_train for training?</b></li>
+			<p>Yes. We already provided camera indices of target training samples </p>
+
+			<li><b>Can we use camera index of target_validation or target_test for re-ranking during evaluation?</b></li>
+			<p>Yes. Please note that camera index of target test set is not available. Maybe you need to train an auxiliary model to predict camera index. </p>
 
 			<li><b>Do we have to use the provided baseline models?</b></li>
 			<p>No, these are provided for your convenience and are optional. </p>
