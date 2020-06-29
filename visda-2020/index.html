@@ -122,7 +122,7 @@ layout: visda2020
 
 		<p><b>Supervised Training:</b> Teams may only submit test results of models trained on the source domain data. To ensure equal comparison, we also do not allow any other external training data, modifying the provided training dataset, or any form of manual data labeling. </p>
 
-		<p><b>Unsupervised training:</b> Models can be adapted (trained) on the test data in an unsupervised way, i.e. without labels.  </p>
+		<p><b>Unsupervised training:</b> Models can be adapted (trained) on the target domain (using the provided target training set) in an unsupervised way, i.e. without labels.  </p>
 
 		<p><b>Source Models:</b> The performance of a domain adaptation algorithm greatly depends on the baseline performance of the model trained only on source data. We ask that teams submit two sets of results: 1) predictions obtained only with the source-trained model, and 2) predictions obtained with the adapted model. See the development kit for submission formatting details. </p>
 
@@ -152,7 +152,7 @@ layout: visda2020
 
 			<li><b>Can we assign pseudo labels to the unlabeled data in the target domain?</b></li>
 			<p>Assigning pseudo labels for the targte training set is allowed as long as no human labeling is involved. Please DO NOT
-			assign pseudo labels for the test set or validation.</p>
+			assign pseudo labels for the test set or validation. (There are three sets in the target domain: target training, target validation, and target test)</p>
 
 			<li><b>Can we use personX_spgan in the challenge??</b></li>
 			<p>Yes. SPGAN is an unsupervised image-level alignment method, please feel free to use it. </p>
