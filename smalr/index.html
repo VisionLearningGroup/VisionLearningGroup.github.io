@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning to Scale Multilingual Representations for Vision-Language Tasks</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#34a853;border-color:#34a853">    
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+      	      <li role="presentation"> <a href="#overview">Overview</a></li>
+      	      <li role="presentation"> <a href="#dataset">Dataset + Code</a></li>
+              <!-- <li role="presentation"> <a href="#code">Code</li> -->
+              <li role="presentation"> <a href="#refs">Reference</a> </li>
+              <li role="presentation"> <a href="./index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+    </nav>
+
+    <div class="container">
+
+    <div class="home-intro" style="padding: 5% 10%">
+      <div class="row">
+          <h1 align="center">Learning to Scale Multilingual Representations for Vision-Language Tasks</h1>
+      </div>
+
+          <div class="project-page">
+          <a name="abstract"></a>
+          <center><h2>Abstract</h2></center>
+          <p class="text-justify">Current multilingual vision-language models either require a large number of
+             additional parameters for each supported language, or suffer performance degradation as languages
+             are added. In this paper, we propose a Scalable Multilingual Aligned Language Representation (SMALR)
+             that represents many languages with few model parameters without sacrificing downstream task
+             performance. SMALR learns a fixed size language-agnostic representation for most words in a
+             multilingual vocabulary, keeping language-specific features for few. We use a novel masked 
+            cross-language modeling loss to align features with context from other languages. Additionally,
+            we propose a cross-lingual consistency module that ensures predictions made for a query and 
+            its machine translation are comparable. The effectiveness of SMALR is demonstrated with
+            ten diverse languages, over twice the number supported in vision-language tasks to date. We 
+            evaluate on multilingual image-sentence retrieval and outperform prior work by 3-4% with less than
+             1/5th the training parameters compared to other word embedding methods.</p>
+          <center>
+          <a
+          href="https://arxiv.org/abs/2004.04312" target="_blank" class="btn btn-danger" role="button">PDF</a>
+          <!--<a
+          href="" target="_blank" class="btn btn-danger" role="button">DEMO</a>-->
+          </center>
+          </div>
+
+    <hr class="soften"></hr>
+
+        
+	  <div class="project-page">
+                <a name="overview"></a/>
+                <center><h2>Overview</h2>
+                <p> Here we give an overview of our findings. For more detailed analysis and experimental results, please refer to the paper. </p>
+             
+                <br>
+                <img width="60%" alt="Trade off between number of model parameters and retrieval performance" src="motivation.png"></img>
+              <br><br>
+            </center>
+                <p>Our goal is to build scalable multilingual vision-language models that perform well in a larger multilingual setting.
+                  Prior multilingual vision-language work has evaluated at most four languages. We evaluate our work on over double that, 
+                  using ten diverse languages for training and testing image-sentence retrieval: English, German, French, Czech, Chinese,
+                  Japanese, Arabic, Afrikaans, Korean, and Russian. We are able to outperform prior work with less than a fifth of the 
+                  trainable parameters, balancing downstream task perform and model scalability.
+                </p>
+                <br>
+                <br>
+                <center>
+                <img width="70%" alt="Model overview" src="SMALR.png"></img>
+                </center>
+                <br>
+                <br>
+                <p> We introduce three primary contributions, highlighted in light blue, of our paper. We introduce a Hybrid Embedding model
+                  (HEM) which significantly reduces the size of our language model by reducing the number of unique language representations 
+                  across our multilingual vocabulary. Next, we introduce a Masked Cross Language Model (MCLM) to better align languages amongst
+                  our diverse, challenging set of ten. We lastly introduce a test-time add on, the Cross Lingual Consistency (CLC) module
+                  which ensures consistency between a language query and its machine translations. This ultimately helps to ensemble retrieval
+                  decisions, by disambiguating subtle details from different queries and the different visual semantic information they
+                  provide.
+                </p>
+
+          <div class="project-page">
+              <a name="dataset"></a>
+              <h2>Open Source Embeddings</h2>
+              <p>COMING SOON
+              </p>
+<p>The vectors are provided in text files, numbers are space separated. Each word vector is separated with a new line character. Please note that not all vocabulary words for a given task 
+may exist within these files. If you need words outside of these files, you can initialize them randomly before use during training.</p>
+              <a href="" target="_blank" class="btn btn-danger" role="button">SMALR</a>
+          </div>
+
+          <div class="project-page">
+                <!--<a name="code"></a>-->
+                <h2> Code </h2>
+                <p>Code used to perform the experiments we present in our paper can be found here: <a href="">COMING SOON</a>.
+                </p>        
+          </div>
+
+          <div class="project-page">
+              <a name="refs"></a>
+              <h2>Reference</h2>
+              <p class="lead"> If you find this useful in your work please consider citing: </p>
+              <div class="highlight">
+              <pre> <code> 
+                @inproceedings{burns2020eccv, 
+                title={Learning to Scale Multilingual Representations for Vision-Language Tasks},
+                author={Andrea Burns and Donghyun Kim and Derry Wijaya and Kate Saenko and Bryan A. Plummer}, 
+                booktitle={The European Conference on Computer Vision (ECCV)}, 
+                year={2020} 
+                }          
+              </code> </pre>
+              </div>
+          </div>
+
+          <div class="project-page">
+              <a name="contact"></a>
+              <h2>Contact</h2>
+              <p>aburns4 [at] bu [dot] edu</p>
+          </div> 
+    </div> <!--container-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+  </body> 
+</html>
