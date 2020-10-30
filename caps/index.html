@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CAPS - Regularizing Action Policies for Smooth Control with Reinforcement Learning</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#34a853;border-color:#34a853">    
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li role="presentation"> <a href="#overview">Overview</a></li>
+            <li role="presentation"> <a href="#dataset">Code</a></li>
+          <!-- <li role="presentation"> <a href="#code">Code</li> -->
+          <li role="presentation"> <a href="#refs">Reference</a> </li>
+          <li role="presentation"> <a href="./index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="home-intro" style="padding: 5% 10%">
+        <div class="row">
+            <h1 align="center">Regularizing Action Policies for Smooth Control with Reinforcement Learning</h1>
+        </div>
+
+        <div class="project-page">
+          <a name="abstract"></a>
+          <center><h2>Abstract</h2></center>
+          <p class="text-justify">
+            A critical problem with the practical utility of controllers trained with deep Reinforcement Learning (RL) is the notable lack of smoothness in the actions learned by the RL policies. This trend often presents itself in the form of control signal oscillation and can result in poor control, high power consumption, and undue system wear. We introduce Conditioning for Action Policy Smoothness (CAPS), a simple but effective regularization on action policies, which offers consistent improvement in the smoothness of the learned state-to-action mappings of neural network controllers, reflected in the elimination of high-frequency components in the control signal. Tested on a real system, improvements in controller smoothness on a quadrotor drone resulted in an almost 80% reduction in power consumption while consistently training flight-worthy controllers.
+          </p>
+          <center>
+          <a href="" target="_blank" class="btn btn-danger" role="button">MAIN PAPER</a>
+          <a href="" target="_blank" class="btn btn-danger" role="button">SUPPLEMENTARY</a>
+          </center>
+        </div>
+          
+        <div class="project-page">
+          <a name="overview"></a>
+            <center><h2>Overview</h2>
+                <!-- <p></p> -->
+                <!-- <br> -->
+                <img width="100%" alt="Smoothing out motor usage" src="Fig1_V3.pdf"></img>
+                <br><br>
+            </center>
+                <!-- <p>
+                </p>
+                <br>
+                <br>
+                <center>
+                </center>
+                <br>
+                <br>
+                <p> 
+                </p> -->
+          </div>
+
+          <div class="project-page">
+            <a name="dataset"></a>
+            <h2>Code</h2>
+            <p>
+                COMING SOON
+            </p>
+            <a href="" target="_blank" class="btn btn-danger" role="button">CAPS</a>
+          </div>
+
+          <div class="project-page">
+            <a name="refs"></a>
+            <h2>Reference</h2>
+            <p class="lead"> If you find this useful in your work please consider citing: </p>
+            <div class="highlight">
+            <pre> <code> 
+              @inproceedings{caps2020, 
+              title={Regularizing Action Policies for Smooth Control with Reinforcement Learning},
+              author={Siddharth Mysore and Bassel Mabsout and Renato Mancuso and Kate Saenko}, 
+              year={2020} 
+              }          
+            </code> </pre>
+            </div>
+          </div>
+
+          <div class="project-page">
+            <a name="contact"></a>
+            <h2>Contact</h2>
+            <p>sidmys [at] bu [dot] edu</p>
+          </div>
+        </div>
+      </div>
+    </div> <!--container-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+  </body> 
+</html>
