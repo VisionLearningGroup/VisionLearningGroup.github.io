@@ -45,8 +45,13 @@
           <p class="text-justify">
             A critical problem with the practical utility of controllers trained with deep Reinforcement Learning (RL) is the notable lack of smoothness in the actions learned by the RL policies. This trend often presents itself in the form of control signal oscillation and can result in poor control, high power consumption, and undue system wear. We introduce Conditioning for Action Policy Smoothness (CAPS), a simple but effective regularization on action policies, which offers consistent improvement in the smoothness of the learned state-to-action mappings of neural network controllers, reflected in the elimination of high-frequency components in the control signal. Tested on a real system, improvements in controller smoothness on a quadrotor drone resulted in an almost 80% reduction in power consumption while consistently training flight-worthy controllers.
           </p>
+          <br>
+          <p>
+            This work has been accpeted for publication and is set to appear at the International Conference on Robotics and Automation (ICRA) 2021.
+          </p>
+          <br>
           <center>
-          <a href="" target="_blank" class="btn btn-danger" role="button">MAIN PAPER (under review)</a>
+          <a href="https://arxiv.org/abs/2012.06644" target="_blank" class="btn btn-danger" role="button">MAIN PAPER</a>
           <a href="./CAPS_SmoothControl_Supplementary.pdf" target="_blank" class="btn btn-danger" role="button">SUPPLEMENTARY</a>
           </center>
         </div>
@@ -150,10 +155,11 @@
             <p class="lead"> If you find this useful in your work please consider citing: </p>
             <div class="highlight">
             <pre> <code> 
-              @inproceedings{caps2020, 
+              @inproceedings{caps2021, 
               title={Regularizing Action Policies for Smooth Control with Reinforcement Learning},
-              author={Siddharth Mysore and Bassel Mabsout and Renato Mancuso and Kate Saenko}, 
-              year={2020} 
+              author={Siddharth Mysore and Bassel Mabsout and Renato Mancuso and Kate Saenko},
+              journal={IEEE International Confernece on Robotics and Automation}, 
+              year={2021},
               }          
             </code> </pre>
             </div>
