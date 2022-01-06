@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 2px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evaluation of Correctness in Unsupervised Many-to-Many Image Translation</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"
+     style="background-color:#34a853;border-color:#34a853">
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li role="presentation"><a href="#abstract">Overview</a></li>
+            <li role="presentation"><a href="#code">Data/Code</a></li>
+            <li role="presentation"><a href="#refs">Reference</a></li>
+        </ul>
+        <!-- </div>--> <!--/.navbar-collapse -->
+
+    </div>
+</nav>
+
+
+<div class="container">
+
+    <div class="home-intro" style="padding: 5% 10%">
+        <div class="row">
+          <h1 align="center">Evaluation of Correctness in Unsupervised Many-to-Many Image Translation</h1>
+            <div style="text-align:center">
+                Dina Bashkirova, Ben Usman, Kate Seanko<br>
+              <b> WACV'22 </b>
+            </div>
+
+
+        </div>
+
+        <div class="project-page">
+            <a name="abstract"></a>
+            <h2>Abstract</h2>
+            <p class="text-justify">
+Given an input image from a source domain and a guidance image from a target domain, unsupervised many-to-many image-to-image (UMMI2I) translation methods seek to generate a plausible example from the target domain that preserves domain-invariant information of the input source image and inherits the domain-specific information from the guidance image. For example, when translating female faces to male faces, the generated male face should have the same expression, pose and hair color as the input female image, and the same facial hairstyle and other male-specific attributes as the guidance male image. Current state-of-the art UMMI2I methods generate visually pleasing images, but, since for most pairs of real datasets we do not know which attributes are domain-specific and which are domain-invariant, the semantic correctness of existing approaches has not been quantitatively evaluated yet. In this paper, we propose a set of benchmarks and metrics for the evaluation of semantic correctness of these methods. We provide an extensive study of existing state-of-the-art UMMI2I translation methods, showing that all methods, to different degrees, fail to infer which attributes are domain-specific and which are domain-invariant from data, and mostly rely on inductive biases hard-coded into their architectures.
+            </p>
+            <center>
+                <a
+                        href="https://openaccess.thecvf.com/content/WACV2022/html/Bashkirova_Evaluation_of_Correctness_in_Unsupervised_Many-to-Many_Image_Translation_WACV_2022_paper.html" target="_blank" class="btn btn-danger"
+                        role="button">PDF</a>
+                <a
+                        href="https://github.com/dbash/umi2i_correctness" target="_blank" class="btn btn-danger"
+                        role="button">Code and Data</a>
+
+          </center>
+        </div>
+
+        <hr class="soften"></hr>
+                <center>
+                  <img width="80%" alt="embedding" src="https://cs-people.bu.edu/dbash/img/i2i_eval.png"></img> </br> </br>
+        <hr class="soften"></hr>
+        <div class="project-page">
+            <a name="code"></a>
+            <h2>Data and Code</h2>
+            <p class="lead">
+              <p>
+                Please find our dataset splits and code to compute metrics here: https://github.com/dbash/umi2i_correctness
+              </p>
+          </p>
+            </p>
+        </div>
+
+
+        <hr class="soften"></hr>
+
+        <div class="project-page">
+
+            <a name="refs"></a>
+            <h2>Reference</h2>
+            <p class="lead">
+                If you find this useful in your work please consider citing:
+            <div class="highlight">
+          <pre> <code>
+@inproceedings{bashkirova2022evaluation,
+    author    = {Bashkirova, Dina and Usman, Ben and Saenko, Kate},
+    title     = {Evaluation of Correctness in Unsupervised Many-to-Many Image Translation},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2022},
+    pages     = {1776-1785}
+}
+            </code> </pre>
+
+
+            </div>
+
+        </div>
+
+    </div> <!--container-->
+    <script src="js/toggle.js"></script> -->
+</body>
+</html>
