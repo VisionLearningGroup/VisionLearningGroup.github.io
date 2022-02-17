@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <title>MultiCriticAL - Multi-Critic Actor Learning: Teaching RL Policies to Act with Style</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/template.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="background-color:#34a853;border-color:#34a853">    
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+            <li role="presentation"> <a href="#overview">Overview</a></li>
+            <li role="presentation"> <a href="#dataset">Code</a></li>
+          <!-- <li role="presentation"> <a href="#code">Code</li> -->
+          <li role="presentation"> <a href="#refs">Reference</a> </li>
+          <li role="presentation"> <a href="./index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="home-intro" style="padding: 5% 10%">
+        <div class="row">
+            <h1 align="center">Multi-Critic Actor Learning: Teaching RL Policies to Act with Style</h1>
+        </div>
+
+        <div class="project-page">
+          <a name="abstract"></a>
+          <center><h2>Abstract</h2></center>
+          <p class="text-justify">
+            Using a single value function (critic) shared over multiple tasks in Actor-Critic multi-task reinforcement learning (MTRL) can result in negative interference between tasks, which can compromise learning performance. 
+            Multi-Critic Actor Learning (MultiCriticAL) proposes instead maintaining separate critics for each task being trained, while training a single multi-task actor. 
+            Explicitly distinguishing between tasks also eliminates the need for critics to learn to do so and mitigates interference between task-value estimates. 
+            MultiCriticAL is tested in the context of multi-style learning, a special case of MTRL where agents are trained to behave with different distinct behavior styles, and yields up to 56% performance gains over the single-critic baselines and even successfully learns behavior styles in cases where single-critic approaches may simply fail to learn. 
+            To simulate a real-world use-case, MultiCriticAL is tested on an experimental build of EA’s UFC game, where it enables learning a policy that can smoothly transition between multiple fighting styles.
+          </p>
+          <br>
+          <p>
+            This work has been accpeted for publication and is set to appear at the International Conference on Learning Representations (ICLR) 2022.
+          </p>
+          <br>
+          <center>
+            <a href="https://openreview.net/forum?id=rJvY_5OzoI" target="_blank" class="btn btn-danger" role="button">OpenReview Page</a>
+            <a href="https://openreview.net/pdf?id=rJvY_5OzoI" target="_blank" class="btn btn-danger" role="button">MAIN PAPER (camera-ready forthcoming)</a>
+          </center>
+        </div>
+          
+        <div class="project-page">
+          <a name="overview"></a>
+            <center><h2>Overview</h2>
+              <!-- <iframe width="900" height="500" src="https://www.youtube.com/embed/yFjkiuXvNrU" title="CAPS - ICRA21 Presentation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+            </center>
+            <br>
+            <p>
+              We explore the problem of multi-task reinforcement learning (MTRL), but specifically in the case where a single policy network is tasked with learning to handle multiple similar, but distinct, tasks -- making it a multi-style learning problem.
+              The `multi-style' setting assumes RL agents operating under the same system dynamics across a selection of tasks, but where each task represents a different behavior, or `style' goal.
+              A common approach to MTRL is to employ one-hot task encoding to delineate between tasks, but this is not always sufficient to enable successful multi-style policy-learning.
+              We suspected that the similarity of game-play states visited between each trained style interfering with each style's value optimization.
+              To remedy this, we developed Multi-Critic Actor Learning (MultiCriticAL), a single-actor, multi-critic framework for multi-task Actor-Critic optimization.
+              The core idea of MultiCriticAL is to maintain separate per-style (or task) critic functions for each style being learned, thus mitigating negative interference between styles.
+              MultiCriticAL consistently trains more performant policies, compared to its single-critic counterparts, succeeds in cases where the single-critic methods fail and achieves between significant improvement in more traditional multi-task settings involving multi-level game-play.
+            </p>
+            <br>
+            <center><img width="100%" alt="MultiCriticAL Overview" src="MultiCriticAL.png"></center>
+            <br><br>
+
+            <h3>Results</h3>
+            <p>
+              We compare policies trained with MultiCriticAL against policies trained with just the typical one-hot task/style encoding on 4 tasks.
+              The first is a simple shape-following task, where the RL policies are asked to do what they do best -- memorize and reproduce optimal behavior.
+              This is easy enough for the policies to learn when they're tasked with learning one shape at a time, but fail when asked to learn multiple shapes.
+              MultiCriticAL however enables significanlty improved results, as shown below.
+              <br><br>
+              <center>
+                <img width="100%" alt="Testing on a toy problem" src="Shapes_v6.png"></center>
+              </center>
+            </p>
+            <br><br>
+
+            <p>
+              We also test MultiCriticAL on a modified game of Pong where the paddle is allowed to rotate, thus enabling more interesting behavior.
+              We train policies on two styles -- Aggressive and Defesnive play.
+              Policies are able to learn either style independently, but the typical one-hot embeddings are not sufficient for learning both simultaneuously, with the dense Defensive play rewards dominating learned behavior, or a complete failure to learn.
+              MultiCriticAL on the other hand enables successful learning of both styles.
+              <br><br>
+              <video width="100%" controls>
+                <source src="./PongVid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </p>
+            <br><br>
+
+            <p>
+              Tested on a more standard multi-task setup, on games of Sonic the Hedgehog (1 and 2), where policies are tasked with learning to control sonic on 17 levels per game, we see a continued trend of superior performance with MultiCriticAL.
+              <br><br>
+              <center>
+                <img width="100%" alt="Sonic and MultiCriticAL" src="Sonic_collected.png"></center>
+              </center>
+            </p>
+            <br><br>
+
+            <p>
+              Finally, tested on an experimental build of EA's UFC, we see that policies are able to learn and transition between multiple behavior styles with MultiCriticAL (video follows below image).
+              <br><br>
+              <center>
+                <img width="100%" alt="MultiCriticAL with UFC" src="UFC_v2.png"></center>
+              </center>
+              <br><br>
+              <video width="100%" controls>
+                <source src="./UFCVid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </p>
+
+          </div>
+
+          <div class="project-page">
+            <a name="dataset"></a>
+            <h2>Code</h2>
+            <p>
+              For the time being, please refer to the supplementary file uploaded on OpenReview.
+              Open-source code will be published soon.
+            </p>
+            <br>
+            <center>
+              <a href="https://openreview.net/attachment?id=rJvY_5OzoI&name=supplementary_material" target="_blank" class="btn btn-danger" role="button">MultiCriticAL Supplementary</a>
+            </center>
+          </div>
+
+          <div class="project-page">
+            <a name="refs"></a>
+            <h2>Reference</h2>
+            <p class="lead"> If you find this useful in your work please consider citing: </p>
+            <div class="highlight">
+            <pre> <code> 
+              @inproceedings{
+                mysore2022multicritic,
+                title={Multi-Critic Actor Learning: Teaching {RL} Policies to Act with Style},
+                author={Siddharth Mysore and George Cheng and Yunqi Zhao and Kate Saenko and Meng Wu},
+                booktitle={International Conference on Learning Representations},
+                year={2022},
+                url={https://openreview.net/forum?id=rJvY_5OzoI}
+                }         
+            </code> </pre>
+            </div>
+          </div>
+
+          <div class="project-page">
+            <a name="contact"></a>
+            <h2>Contact</h2>
+            <p>sidmys [at] bu [dot] edu, bmabsout [at] bu [dot] edu</p>
+          </div>
+        </div>
+      </div>
+    </div> <!--container-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="js/bootstrap.min.js"></script>
+    <script src="js/toggle.js"></script> -->
+  </body> 
+</html>
