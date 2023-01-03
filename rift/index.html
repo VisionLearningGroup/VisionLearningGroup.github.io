@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>MetaPose: Fast 3D Pose from Multiple Views without 3D Supervision</title>
+    <link media="all" href="https://metapose.github.io/css.css" type="text/css" rel="StyleSheet">
+
+  </head>
+  <body>
+<body>
+<div id="primarycontent">
+<center><h1><b>MetaPose</b>: </br> Fast 3D Pose from Multiple Views without 3D Supervision</h1></center>
+<center><h2>
+	<a href="https://usmnb.github.io/">Ben Usman</a>&nbsp;&nbsp;&nbsp;
+	<a href="https://taiya.github.io/">Andrea Tagliasacchi</a>&nbsp;&nbsp;&nbsp;
+	<a href="http://ai.bu.edu/ksaenko.html">Kate Saenko</a>&nbsp;&nbsp;&nbsp;
+	<a href="https://scholar.google.com/citations?user=zc6Iy0IAAAAJ&hl=en">Avneesh Sud</a>
+	</h2>
+
+	<center><h2>
+		Boston University&nbsp;&nbsp;&nbsp;
+		Google Research&nbsp;&nbsp;&nbsp;
+		Simon Fraser University&nbsp;&nbsp;&nbsp;
+		MIT-IBM Watson AI Lab&nbsp;&nbsp;&nbsp;
+	</h2></center>
+<center><h2>In CVPR 2022</h2></center>
+<center><h2><strong><a href="https://arxiv.org/pdf/2108.04869.pdf">Paper</a> | <a href="https://github.com/google-research/google-research/tree/master/metapose">Code</a> | <a href="https://drive.google.com/drive/folders/1MrD9lvfz2keG58LoBx3X_pptBja-TQmY?usp=sharing"> Demo Videos </a></strong> </h2></center>
+
+<center style="margin-top:1cm;">
+    <img src="task.png" width="500">
+    </br>
+    </br>
+    <img src="advantages.png" width="500">
+</center>
+</br>
+<div style="font-size:14px"><p align="justify">
+MetaPose accurately estimates <b>3D human poses</b>, takes into account <b>multi-view uncertainty</b>, and uses only <b>2D supervision</b> for training!
+It is <b>faster</b> and <b>more accurate</b>, especially with fewer cameras.
+</p></div>
+
+</br>
+<h2 align="center">Abstract</h2>
+</br>
+<div style="font-size:14px"><p align="justify"> In the era of deep learning, human pose estimation from multiple cameras with unknown calibration has received little attention to date. We show how to train a neural model to perform this task with high precision and minimal latency overhead. The proposed model takes into account joint location uncertainty due to occlusion from multiple views, and requires only 2D keypoint data for training. Our method outperforms both classical bundle adjustment and weakly-supervised monocular 3D baselines on the well-established Human3.6M dataset, as well as the more challenging in-the-wild Ski-Pose PTZ dataset. </p></div>
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vS912hgf0ON8uWtjhhGmsvs2lHnG6bmG2Kf28MleUFlnyVSIeV_5m1D4RdB7HbXOieWiy8ewZ2B-xTD/embed?start=false&loop=false&delayms=60000" frameborder="0" width="800" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<a href="https://docs.google.com/presentation/d/1_rV2pnMOoEJ1kXzunJ-ARbLuY8QKdw050nS0lHXIATY/edit?usp=sharing">[slide deck link]</a>
+
+</br>
+</br>
+</br>
+<h2 align="center">Citation</h2>
+<pre align="left"><code align="left">
+@inproceedings{usman2021metapose,
+    author    = {Usman, Ben and Tagliasacchi, Andrea and Saenko, Kate and Sud, Avneesh},
+    title     = {MetaPose: Fast 3D Pose from Multiple Views without 3D Supervision},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022}
+}
+</pre></code>
+</br></br></br></br>
+</body>
