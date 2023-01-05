@@ -22,21 +22,17 @@
 <center><h2><strong><a href="https://drive.google.com/file/d/1H6UOP31H4Ofmq06k37nQaZzn279oPxcZ/view?usp=sharing">Paper</a> | <a href="https://drive.google.com/file/d/1SjhYi87deO0ETd0_52U32cXsuL7pYhxT/view?usp=sharing"> Supplementary </a> | <a href="https://github.com/MInner/rift">Code</a> | <a href="https://www.youtube.com/watch?v=T3qTaNMjg8k"> Video </a> </strong> </h2></center>
 
 <center style="margin-top:1cm;">
-    <img src="task.png" width="500">
-    </br>
-    </br>
-    <img src="advantages.png" width="500">
+    <img src="https://ai.bu.edu/rift/rift-web-image.png" width="500">
 </center>
 </br>
 <div style="font-size:14px"><p align="justify">
-MetaPose accurately estimates <b>3D human poses</b>, takes into account <b>multi-view uncertainty</b>, and uses only <b>2D supervision</b> for training!
-It is <b>faster</b> and <b>more accurate</b>, especially with fewer cameras.
+We propose a new many-to-many image translation method that infers which attributes are domain-specific <b>from data</b> by constraining information flow through the network using translation honesty losses and a penalty on the capacity of the domain-specific embedding, and does not rely on hard-coded inductive architectural biases.
 </p></div>
 
 </br>
 <h2 align="center">Abstract</h2>
 </br>
-<div style="font-size:14px"><p align="justify"> In the era of deep learning, human pose estimation from multiple cameras with unknown calibration has received little attention to date. We show how to train a neural model to perform this task with high precision and minimal latency overhead. The proposed model takes into account joint location uncertainty due to occlusion from multiple views, and requires only 2D keypoint data for training. Our method outperforms both classical bundle adjustment and weakly-supervised monocular 3D baselines on the well-established Human3.6M dataset, as well as the more challenging in-the-wild Ski-Pose PTZ dataset. </p></div>
+<div style="font-size:14px"><p align="justify"> Unsupervised image-to-image translation methods aim to map images from one domain into plausible examples from another domain while preserving the structure shared across two domains. In the many-to-many setting, an additional guidance example from the target domain is used to determine the domain-specific factors of variation of the generated image. In the absence of attribute annotations, methods have to infer which factors of variation are specific to each domain from data during training. In this paper, we show that many state-of-the-art architectures implicitly treat textures and colors as always being domain-specific, and thus fail when they are not. We propose a new method called RIFT that does not rely on such inductive architectural biases and instead infers which attributes are domain-specific vs shared directly from data. As a result, RIFT achieves consistently high cross-domain manipulation accuracy across multiple datasets spanning a wide variety of domain-specific and shared factors of variation. </p></div>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/T3qTaNMjg8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </br>
@@ -44,12 +40,12 @@ It is <b>faster</b> and <b>more accurate</b>, especially with fewer cameras.
 </br>
 <h2 align="center">Citation</h2>
 <pre align="left"><code align="left">
-@inproceedings{usman2021metapose,
-    author    = {Usman, Ben and Tagliasacchi, Andrea and Saenko, Kate and Sud, Avneesh},
-    title     = {MetaPose: Fast 3D Pose from Multiple Views without 3D Supervision},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    month     = {June},
-    year      = {2022}
+@inproceedings{usman2023rift,
+    author    = {Usman, Ben and Bashkirova, Dina and Saenko, Kate},
+    title     = {{RIFT}: Disentangled Unsupervised Image Translation via Restricted Information Flow},
+    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+    month     = {January},
+    year      = {2023}
 }
 </pre></code>
 </br></br></br></br>
