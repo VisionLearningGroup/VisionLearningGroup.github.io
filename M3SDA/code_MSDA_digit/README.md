@@ -16,6 +16,10 @@ The code has been tested on Python 3.6+PyTorch 0.3. To run the training and test
 ```
 pip install git+https://github.com/pytorch/tnt.git@master
 ```
+- If an error related to torchnet appears, please install it as:
+```
+pip install torchnet
+```
 - Install gdown
 - Install scipy and other dependencies as required by your environment.
 
@@ -41,8 +45,8 @@ chmod +x experiment_do.sh
 3. Create a new folder called data and save there the download files from Digit-Five
 ```
 gdown 1A4RJOFj4BJkmliiEL7g9WzNIDUHLxfmm
-mkdir data
-unzip -r Digit-Five.zip -d data/
+unzip Digit-Five.zip
+mv Digit-Five data
 ```
 4. Run the SH script
 ```
