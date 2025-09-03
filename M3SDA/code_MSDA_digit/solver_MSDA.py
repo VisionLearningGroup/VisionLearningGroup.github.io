@@ -233,7 +233,7 @@ class Solver(object):
             
             output1 = self.C1(feat)
             
-            test_loss += F.nll_loss(output1, label).data[0]
+            test_loss += F.nll_loss(output1, label).data
             pred1 = output1.data.max(1)[1]
             k = label.data.size()[0]
             correct1 += pred1.eq(label.data).cpu().sum()
@@ -354,10 +354,10 @@ class Solver(object):
             if batch_idx % self.interval == 0:
                 print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss1: {:.6f}\t Loss2: {:.6f}\t  Discrepancy: {:.6f}'.format(
                     epoch, batch_idx, 100,
-                    100. * batch_idx / 70000, loss_s_c1.data[0], loss_s_c2.data[0], loss_dis.data[0]))
+                    100. * batch_idx / 70000, loss_s_c1.data, loss_s_c2.data, loss_dis.data))
                 if record_file:
                     record = open(record_file, 'a')
-                    record.write('%s %s %s\n' % (loss_dis.data[0], loss_s_c1.data[0], loss_s_c2.data[0]))
+                    record.write('%s %s %s\n' % (loss_dis.data, loss_s_c1.data, loss_s_c2.data))
                     record.close()
         return batch_idx
 
