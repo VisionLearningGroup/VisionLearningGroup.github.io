@@ -76,6 +76,7 @@ def main():
     if not os.path.exists(args.checkpoint_dir):
         os.mkdir(args.checkpoint_dir)
     if not os.path.exists(args.record_folder):
+        os.mkdir(args.record_folder.split('/')[0])
         os.mkdir(args.record_folder)
     if args.eval_only:
         solver.test(0)
